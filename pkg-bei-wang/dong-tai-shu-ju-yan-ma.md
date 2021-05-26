@@ -15,7 +15,7 @@ description: 动态数据掩码（Dynamic Data Masking，简称为DDM）能够�
 | 身份证号 | 前 1 后 1 | 1******7 | 定长 18 位
 ```
 
-```text
+```go
 package ddm
 
 // 手机号 132****7986
@@ -39,7 +39,7 @@ type PassWord string
 type Email string
 ```
 
-```text
+```go
 package ddm
 
 import (
@@ -104,7 +104,7 @@ func (e Email) MarshalJSON() ([]byte, error) {
 }
 ```
 
-```text
+```go
 package main
 
 import (
@@ -144,7 +144,7 @@ func main() {
 }
 ```
 
-```text
+```bash
 {"name":"*鸿章","mobile":"132****7986","id_card":"1******2","password":"******","email":"x***e@163.com","bank_card_1":"654565******6545","bank_card_2":"654852******9852","bank_card_3":"
 654852******5298"}
 ```
