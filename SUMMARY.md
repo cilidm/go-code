@@ -7,6 +7,6 @@
   * [使用go1.6内嵌资源构建静态服务](cheng-xu-yuan-zai-jiong-tu/shi-yong-go1.6-nei-qian-zi-yuan-gou-jian-jing-tai-fu-wu.md)
 * [Code记录](code-ji-lu/README.md)
   * [动态数据掩码](code-ji-lu/dong-tai-shu-ju-yan-ma.md)
-* [PKG备忘](pkg-bei-wang.md)
-* [HttpRequest](httprequest.md)
+* [PKG备忘](pkg-bei-wang/README.md)
+  * [HttpRequest](pkg-bei-wang/httprequest.md)
 
