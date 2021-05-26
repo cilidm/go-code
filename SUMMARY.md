@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Go Python学习笔记](README.md)
+* [Go Python学习备忘](README.md)
 * [Go+Python双语言混合开发](go+python-shuang-yu-yan-hun-he-kai-fa/README.md)
   * [匿名变量](go+python-shuang-yu-yan-hun-he-kai-fa/ni-ming-bian-liang.md)
 * [程序员在囧途](cheng-xu-yuan-zai-jiong-tu/README.md)
