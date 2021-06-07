@@ -10,4 +10,6 @@
   * [Gin框架引入embed](pkg-bei-wang/gin-kuang-jia-yin-ru-embed.md)
   * [动态数据掩码](pkg-bei-wang/dong-tai-shu-ju-yan-ma.md)
   * [HttpRequest](pkg-bei-wang/httprequest.md)
+* [学院君](xue-yuan-jun/README.md)
+  * [基于管道技术实现函数的流式调用](xue-yuan-jun/ji-yu-guan-dao-ji-shu-shi-xian-han-shu-de-liu-shi-tiao-yong.md)
 
