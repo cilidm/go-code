@@ -119,7 +119,7 @@ func main() {
 
 ```
 
-前端引用方式
+前端引用方式：调用`static/component/pear/css/pear.css`
 
 ```text
 <link rel="stylesheet" href="/asset/component/pear/css/pear.css" />
