@@ -9,8 +9,9 @@ import (
 )
 
 type Config struct {
-	DB DBConf
+	DB    DBConf
 	Redis RedisConf
+	Zap   ZapConf
 }
 
 type DBConf struct {
@@ -26,6 +27,18 @@ type RedisConf struct {
 	Addr string
 	PWD  string
 	DB   int
+}
+
+type ZapConf struct {
+	Level         string `json:"level" yaml:"level"`
+	Format        string ` json:"format" yaml:"format"`
+	Prefix        string ` json:"prefix" yaml:"prefix"`
+	Director      string ` json:"director"  yaml:"director"`
+	LinkName      string ` json:"linkName" yaml:"link-name"`
+	ShowLine      bool   ` json:"showLine" yaml:"showLine"`
+	EncodeLevel   string ` json:"encodeLevel" yaml:"encode-level"`
+	StacktraceKey string `json:"stacktraceKey" yaml:"stacktrace-key"`
+	LogInConsole  bool   `json:"logInConsole" yaml:"log-in-console"`
 }
 
 // WriteConfig - 将当前的viper配置写入预定义的路径并覆盖（如果存在的话）。如果没有预定义的路径，则报错。
@@ -50,6 +63,17 @@ func main() {
 	v.Set("Redis.Addr", "127.0.0.1:6379")
 	v.Set("Redis.PWD", "")
 	v.Set("Redis.DB", "0")
+
+	v.Set("Zap.Level", "info")
+	v.Set("Zap.Format", "console")
+	v.Set("Zap.Prefix", "[base-spider]")
+	v.Set("Zap.Director", "runtime/log")
+	v.Set("Zap.LinkName", "latest_log")
+	v.Set("Zap.ShowLine", true)
+	v.Set("Zap.EncodeLevel", "LowercaseColorLevelEncoder")
+	v.Set("Zap.StacktraceKey", "stacktrace")
+	v.Set("Zap.LogInConsole", true)
+
 	v.WriteConfigAs("config.yaml")
 	//v.SafeWriteConfigAs("config.yaml")
 
