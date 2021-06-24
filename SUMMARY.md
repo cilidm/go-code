@@ -7,6 +7,7 @@
   * [Gin模拟大文件上传 分片存储 分片显示](cheng-xu-yuan-zai-jiong-tu/gin-mo-ni-da-wen-jian-shang-chuan-fen-pian-cun-chu-fen-pian-xian-shi.md)
   * [使用go1.6内嵌资源构建静态服务](cheng-xu-yuan-zai-jiong-tu/shi-yong-go1.6-nei-qian-zi-yuan-gou-jian-jing-tai-fu-wu.md)
 * [PKG备忘](pkg-bei-wang/README.md)
+  * [viper写入配置文件](pkg-bei-wang/viper-xie-ru-pei-zhi-wen-jian.md)
   * [根路径总是被访问两次，都是favicon.ico惹出来的](pkg-bei-wang/gen-lu-jing-zong-shi-bei-fang-wen-liang-ci-du-shi-favicon.ico-re-chu-lai-de.md)
   * [调用浏览器打开指定网页](pkg-bei-wang/tiao-yong-liu-lan-qi-da-kai-zhi-ding-wang-ye.md)
   * [公众号](pkg-bei-wang/gong-zhong-hao.md)
@@ -15,5 +16,4 @@
   * [HttpRequest](pkg-bei-wang/httprequest.md)
 * [学院君](xue-yuan-jun/README.md)
   * [基于管道技术实现函数的流式调用](xue-yuan-jun/ji-yu-guan-dao-ji-shu-shi-xian-han-shu-de-liu-shi-tiao-yong.md)
-* [viper写入配置文件](viper-xie-ru-pei-zhi-wen-jian.md)
 
