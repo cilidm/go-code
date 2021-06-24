@@ -85,3 +85,34 @@ func main() {
 
 ```
 
+通过反射写入配置：
+
+```go
+  v := viper.New()
+	//设置读取的配置文件
+	v.AddConfigPath("./")
+	v.SetConfigFile("config.yaml")
+
+	var conf Config
+	conf.DB.Host = "127.0.0.1"
+	conf.DB.Type = "mysql"
+	conf.DB.User = "root"
+	conf.DB.Pwd = "123456"
+	conf.DB.Name = "base-system"
+	conf.DB.Host = "127.0.0.1"
+	conf.DB.Port = "3306"
+
+	t := reflect.TypeOf(conf)
+	if t.Kind() != reflect.Struct {
+		fmt.Println("error not struct")
+		return
+	}
+
+	val := reflect.ValueOf(conf)
+	for i := 0; i < t.NumField(); i++ {
+		fmt.Println(t.Field(i).Tag.Get("json"),t.Field(i).Name,val.Field(i))
+		v.Set(t.Field(i).Tag.Get("json"),val.Field(i).Interface())
+	}
+	v.WriteConfigAs("config.yaml")
+```
+
