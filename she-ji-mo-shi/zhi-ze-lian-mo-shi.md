@@ -118,3 +118,9 @@ func TestChain(t *testing.T){
 
 ```
 
+#### 常用范例：
+
+多端存储配置 cos minio oss store webp，进行has匹配，如果存在则执行
+
+
+
