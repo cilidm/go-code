@@ -17,5 +17,6 @@
 * [学院君](xue-yuan-jun/README.md)
   * [基于管道技术实现函数的流式调用](xue-yuan-jun/ji-yu-guan-dao-ji-shu-shi-xian-han-shu-de-liu-shi-tiao-yong.md)
 * [设计模式](she-ji-mo-shi/README.md)
+  * [职责链模式](she-ji-mo-shi/zhi-ze-lian-mo-shi.md)
   * [创建者模式](she-ji-mo-shi/chuang-jian-zhe-mo-shi.md)
 
