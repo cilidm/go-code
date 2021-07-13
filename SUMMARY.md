@@ -5,6 +5,7 @@
   * [匿名变量](go+python-shuang-yu-yan-hun-he-kai-fa/ni-ming-bian-liang.md)
 * [程序员在囧途](cheng-xu-yuan-zai-jiong-tu/README.md)
   * [设计模式](cheng-xu-yuan-zai-jiong-tu/she-ji-mo-shi/README.md)
+    * [选项模式](cheng-xu-yuan-zai-jiong-tu/she-ji-mo-shi/xuan-xiang-mo-shi.md)
     * [装饰器模式](cheng-xu-yuan-zai-jiong-tu/she-ji-mo-shi/zhuang-shi-qi-mo-shi.md)
     * [建造者模式](cheng-xu-yuan-zai-jiong-tu/she-ji-mo-shi/jian-zao-zhe-mo-shi.md)
     * [工厂方法模式](cheng-xu-yuan-zai-jiong-tu/she-ji-mo-shi/gong-chang-fang-fa-mo-shi.md)
