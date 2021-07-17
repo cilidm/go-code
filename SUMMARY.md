@@ -35,5 +35,6 @@
   * [职责链模式](she-ji-mo-shi/zhi-ze-lian-mo-shi.md)
   * [创建者模式](she-ji-mo-shi/chuang-jian-zhe-mo-shi.md)
 * [LeetCode算法](leetcode-suan-fa/README.md)
+  * [两数之和](leetcode-suan-fa/liang-shu-zhi-he.md)
   * [只出现一次的数字](leetcode-suan-fa/zhi-chu-xian-yi-ci-de-shu-zi.md)
 
