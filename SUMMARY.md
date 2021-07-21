@@ -4,6 +4,7 @@
 * [Go+Python双语言混合开发](go+python-shuang-yu-yan-hun-he-kai-fa/README.md)
   * [匿名变量](go+python-shuang-yu-yan-hun-he-kai-fa/ni-ming-bian-liang.md)
 * [程序员在囧途](cheng-xu-yuan-zai-jiong-tu/README.md)
+  * [多协程并发运行收集错误信息](cheng-xu-yuan-zai-jiong-tu/duo-xie-cheng-bing-fa-yun-hang-shou-ji-cuo-wu-xin-xi.md)
   * [设计模式](cheng-xu-yuan-zai-jiong-tu/she-ji-mo-shi/README.md)
     * [代理模式](cheng-xu-yuan-zai-jiong-tu/she-ji-mo-shi/dai-li-mo-shi.md)
     * [选项模式](cheng-xu-yuan-zai-jiong-tu/she-ji-mo-shi/xuan-xiang-mo-shi.md)
