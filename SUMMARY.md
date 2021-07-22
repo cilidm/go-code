@@ -38,4 +38,8 @@
 * [LeetCode算法](leetcode-suan-fa/README.md)
   * [两数之和](leetcode-suan-fa/liang-shu-zhi-he.md)
   * [只出现一次的数字](leetcode-suan-fa/zhi-chu-xian-yi-ci-de-shu-zi.md)
+* [Offer](offer/README.md)
+  * [问答篇](offer/wen-da-pian.md)
+  * [算法篇](offer/suan-fa-pian/README.md)
+    * [算法](offer/suan-fa-pian/suan-fa.md)
 
