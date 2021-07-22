@@ -39,6 +39,14 @@
   * [两数之和](leetcode-suan-fa/liang-shu-zhi-he.md)
   * [只出现一次的数字](leetcode-suan-fa/zhi-chu-xian-yi-ci-de-shu-zi.md)
 * [Offer](offer/README.md)
+  * [Redis](offer/untitled/README.md)
+    * [是否使用过Redis集群，集群的原理是什么？](offer/untitled/shi-fou-shi-yong-guo-redis-ji-qun-ji-qun-de-yuan-li-shi-shen-me.md)
+    * [Redis的同步机制了解么？](offer/untitled/redis-de-tong-bu-ji-zhi-le-jie-me.md)
+    * [redis 最适合的场景](offer/untitled/redis-zui-kuo-he-de-chang-jing.md)
+    * [redis常见性能问题和解决方案](offer/untitled/redis-chang-jian-xing-neng-wen-ti-he-jie-jue-fang-an.md)
+    * [Redis 常见的性能问题都有哪些？如何解决？](offer/untitled/redis-chang-jian-de-xing-neng-wen-ti-du-you-na-xie-ru-he-jie-jue.md)
+    * [热点数据](offer/untitled/re-dian-shu-ju.md)
+    * [Redis优点](offer/untitled/redis-you-dian.md)
   * [Mysql](offer/mysql-1/README.md)
     * [存储过程与触发器的区别](offer/mysql-1/cun-chu-guo-cheng-yu-chu-fa-qi-de-qu-bie.md)
     * [解释 SQL 的 left join 和 right join](offer/mysql-1/jie-shi-sql-de-left-join-he-right-join.md)
@@ -54,9 +62,4 @@
     * [问答](offer/wen-da-pian/wen-da.md)
   * [算法篇](offer/suan-fa-pian/README.md)
     * [算法](offer/suan-fa-pian/suan-fa.md)
-* [Untitled](untitled.md)
-
-## Redis
-
-* [1](redis/1.md)
 
