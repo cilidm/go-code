@@ -39,7 +39,10 @@
   * [两数之和](leetcode-suan-fa/liang-shu-zhi-he.md)
   * [只出现一次的数字](leetcode-suan-fa/zhi-chu-xian-yi-ci-de-shu-zi.md)
 * [Offer](offer/README.md)
-  * [问答篇](offer/wen-da-pian.md)
+  * [Mysql](offer/mysql-1/README.md)
+    * [主键 超键 候选键 外键是什么](offer/mysql-1/zhu-jian-chao-jian-hou-xuan-jian-wai-jian-shi-shen-me.md)
+  * [问答篇](offer/wen-da-pian/README.md)
+    * [问答](offer/wen-da-pian/wen-da.md)
   * [算法篇](offer/suan-fa-pian/README.md)
     * [算法](offer/suan-fa-pian/suan-fa.md)
 
