@@ -40,6 +40,7 @@
   * [只出现一次的数字](leetcode-suan-fa/zhi-chu-xian-yi-ci-de-shu-zi.md)
 * [Offer](offer/README.md)
   * [interview-go](offer/interview-go/README.md)
+    * [为什么MySQL使用B+树做索引？](offer/interview-go/wei-shen-me-mysql-shi-yong-b+-shu-zuo-suo-yin.md)
     * [Redis 基础](offer/interview-go/redis.md)
     * [Redis中的数据结构1](offer/interview-go/redis-zhong-de-shu-ju-jie-gou.md)
     * [Redis中的数据结构2](offer/interview-go/redis-zhong-de-shu-ju-jie-gou-2.md)
