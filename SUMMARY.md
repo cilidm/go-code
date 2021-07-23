@@ -97,8 +97,3 @@
     * [zookeeper](offer/interview_internal_reference/zookeeper/README.md)
       * [Zookeeper](offer/interview_internal_reference/zookeeper/zookeeper.md)
 
-## code
-
-* [code](code/code/README.md)
-  * [交替打印数字和字母](code/code/untitled.md)
-
