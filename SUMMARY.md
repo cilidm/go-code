@@ -42,6 +42,7 @@
   * [interview-go](offer/interview-go/README.md)
     * [MySQL数据库经典面试题解析](offer/interview-go/mysql-shu-ju-ku-jing-dian-mian-shi-ti-jie-xi.md)
     * [为什么MySQL使用B+树做索引？](offer/interview-go/wei-shen-me-mysql-shi-yong-b+-shu-zuo-suo-yin.md)
+    * [MySQL InnoDB MVCC 机制的原理及实现](offer/interview-go/mysql-innodb-mvcc-ji-zhi-de-yuan-li-ji-shi-xian.md)
     * [Redis 基础](offer/interview-go/redis.md)
     * [Redis中的数据结构1](offer/interview-go/redis-zhong-de-shu-ju-jie-gou.md)
     * [Redis中的数据结构2](offer/interview-go/redis-zhong-de-shu-ju-jie-gou-2.md)
