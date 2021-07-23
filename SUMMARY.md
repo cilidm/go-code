@@ -40,9 +40,14 @@
   * [只出现一次的数字](leetcode-suan-fa/zhi-chu-xian-yi-ci-de-shu-zi.md)
 * [Offer](offer/README.md)
   * [Code](offer/code/README.md)
-    * [q008](offer/code/q008.md)
-    * [实现两个 goroutine交替输出](offer/code/shi-xian-liang-ge-goroutine-jiao-ti-shu-chu.md)
-    * [q007](offer/code/q007.md)
+    * [语法找错题](offer/code/yu-fa-zhao-cuo-ti.md)
+    * [为 sync.WaitGroup 中Wait函数支持 WaitTimeout 功能.](offer/code/wei-sync.waitgroup-zhong-wait-han-shu-zhi-chi-waittimeout-gong-neng-..md)
+    * [高并发下的锁与map的读写](offer/code/gao-bing-fa-xia-de-suo-yu-map-de-du-xie.md)
+    * [写出以下逻辑，要求每秒钟调用一次proc并保证程序不退出?](offer/code/xie-chu-yi-xia-luo-ji-yao-qiu-mei-miao-zhong-tiao-yong-yi-ci-proc-bing-bao-zheng-cheng-xu-bu-tui-chu.md)
+    * [实现阻塞读且并发安全的map](offer/code/shi-xian-zu-sai-du-qie-bing-fa-an-quan-de-map.md)
+    * [常见语法题目 二](offer/code/q008.md)
+    * [在 golang 协程和channel配合使用](offer/code/shi-xian-liang-ge-goroutine-jiao-ti-shu-chu.md)
+    * [常见语法题目 一](offer/code/q007.md)
     * [机器人坐标问题](offer/code/ji-qi-ren-zuo-biao-wen-ti.md)
     * [交替打印数字和字母](offer/code/jiao-ti-da-yin-shu-zi-he-zi-mu.md)
     * [字符串替换问题](offer/code/zi-fu-chuan-ti-huan-wen-ti.md)
@@ -106,6 +111,4 @@
       * [Redis优点](offer/interview_internal_reference/untitled/redis-you-dian.md)
     * [zookeeper](offer/interview_internal_reference/zookeeper/README.md)
       * [Zookeeper](offer/interview_internal_reference/zookeeper/zookeeper.md)
-
-## demo
 
