@@ -40,6 +40,9 @@
   * [只出现一次的数字](leetcode-suan-fa/zhi-chu-xian-yi-ci-de-shu-zi.md)
 * [Offer](offer/README.md)
   * [Code](offer/code/README.md)
+    * [q008](offer/code/q008.md)
+    * [实现两个 goroutine交替输出](offer/code/shi-xian-liang-ge-goroutine-jiao-ti-shu-chu.md)
+    * [q007](offer/code/q007.md)
     * [机器人坐标问题](offer/code/ji-qi-ren-zuo-biao-wen-ti.md)
     * [交替打印数字和字母](offer/code/jiao-ti-da-yin-shu-zi-he-zi-mu.md)
     * [字符串替换问题](offer/code/zi-fu-chuan-ti-huan-wen-ti.md)
@@ -103,4 +106,6 @@
       * [Redis优点](offer/interview_internal_reference/untitled/redis-you-dian.md)
     * [zookeeper](offer/interview_internal_reference/zookeeper/README.md)
       * [Zookeeper](offer/interview_internal_reference/zookeeper/zookeeper.md)
+
+## demo
 
