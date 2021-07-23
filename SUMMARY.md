@@ -41,6 +41,8 @@
 * [Offer](offer/README.md)
   * [Code](offer/code/README.md)
     * [交替打印数字和字母](offer/code/jiao-ti-da-yin-shu-zi-he-zi-mu.md)
+    * [字符串替换问题](offer/code/zi-fu-chuan-ti-huan-wen-ti.md)
+    * [判断两个给定的字符串排序后是否一致](offer/code/pan-duan-liang-ge-gei-ding-de-zi-fu-chuan-pai-xu-hou-shi-fou-yi-zhi.md)
     * [翻转字符串](offer/code/fan-zhuan-zi-fu-chuan.md)
     * [判断字符串中字符是否全都不同](offer/code/pan-duan-zi-fu-chuan-zhong-zi-fu-shi-fou-quan-du-bu-tong.md)
   * [interview-go](offer/interview-go/README.md)
