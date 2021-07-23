@@ -40,6 +40,7 @@
   * [只出现一次的数字](leetcode-suan-fa/zhi-chu-xian-yi-ci-de-shu-zi.md)
 * [Offer](offer/README.md)
   * [Code](offer/code/README.md)
+    * [机器人坐标问题](offer/code/ji-qi-ren-zuo-biao-wen-ti.md)
     * [交替打印数字和字母](offer/code/jiao-ti-da-yin-shu-zi-he-zi-mu.md)
     * [字符串替换问题](offer/code/zi-fu-chuan-ti-huan-wen-ti.md)
     * [判断两个给定的字符串排序后是否一致](offer/code/pan-duan-liang-ge-gei-ding-de-zi-fu-chuan-pai-xu-hou-shi-fou-yi-zhi.md)
