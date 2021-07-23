@@ -1,6 +1,4 @@
-# redis
-
-## Redis 基础
+# Redis 基础
 
 ### Redis常见的数据结构？
 
