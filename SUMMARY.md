@@ -58,6 +58,7 @@
   * [备忘录模式](she-ji-mo-shi/bei-wang-lu-mo-shi.md)
   * [解释器模式](she-ji-mo-shi/jie-shi-qi-mo-shi.md)
   * [职责链模式](she-ji-mo-shi/zhi-ze-lian-mo-shi.md)
+  * [访问者模式](she-ji-mo-shi/fang-wen-zhe-mo-shi.md)
 * [LeetCode算法](leetcode-suan-fa/README.md)
   * [两数之和](leetcode-suan-fa/liang-shu-zhi-he.md)
   * [只出现一次的数字](leetcode-suan-fa/zhi-chu-xian-yi-ci-de-shu-zi.md)
