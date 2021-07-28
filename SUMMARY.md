@@ -51,6 +51,7 @@
   * [中介者模式](she-ji-mo-shi/zhong-jie-zhe-mo-shi.md)
   * [观察者模式](she-ji-mo-shi/guan-cha-zhe-mo-shi.md)
   * [命令模式](she-ji-mo-shi/ming-ling-mo-shi.md)
+  * [迭代器模式](she-ji-mo-shi/die-dai-qi-mo-shi.md)
   * [职责链模式](she-ji-mo-shi/zhi-ze-lian-mo-shi.md)
 * [LeetCode算法](leetcode-suan-fa/README.md)
   * [两数之和](leetcode-suan-fa/liang-shu-zhi-he.md)
