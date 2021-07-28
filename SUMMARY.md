@@ -55,6 +55,8 @@
   * [模板方法模式](she-ji-mo-shi/mo-ban-fang-fa-mo-shi.md)
   * [策略模式](she-ji-mo-shi/ce-lve-mo-shi.md)
   * [状态模式](she-ji-mo-shi/zhuang-tai-mo-shi.md)
+  * [备忘录模式](she-ji-mo-shi/bei-wang-lu-mo-shi.md)
+  * [解释器模式](she-ji-mo-shi/jie-shi-qi-mo-shi.md)
   * [职责链模式](she-ji-mo-shi/zhi-ze-lian-mo-shi.md)
 * [LeetCode算法](leetcode-suan-fa/README.md)
   * [两数之和](leetcode-suan-fa/liang-shu-zhi-he.md)
