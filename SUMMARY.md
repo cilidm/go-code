@@ -28,6 +28,7 @@
   * [viper写入配置文件](pkg-bei-wang/viper-xie-ru-pei-zhi-wen-jian.md)
   * [根路径总是被访问两次，都是favicon.ico惹出来的](pkg-bei-wang/gen-lu-jing-zong-shi-bei-fang-wen-liang-ci-du-shi-favicon.ico-re-chu-lai-de.md)
   * [调用浏览器打开指定网页](pkg-bei-wang/tiao-yong-liu-lan-qi-da-kai-zhi-ding-wang-ye.md)
+  * [Golang 使用 JSON unmarshal 数字到 interface{} 数字变成 float64 类型](pkg-bei-wang/golang-shi-yong-json-unmarshal-shu-zi-dao-interface-shu-zi-bian-cheng-float64-lei-xing.md)
   * [公众号](pkg-bei-wang/gong-zhong-hao.md)
   * [Gin框架引入embed](pkg-bei-wang/gin-kuang-jia-yin-ru-embed.md)
   * [动态数据掩码](pkg-bei-wang/dong-tai-shu-ju-yan-ma.md)
