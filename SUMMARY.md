@@ -72,7 +72,7 @@
     * [go基础](offer/shou-ji/go-ji-chu.md)
     * [go并发](offer/shou-ji/go-bing-fa.md)
     * [项目中缓存是如何使用的？缓存如果使用不当会造成什么后果？](offer/shou-ji/mian-shi-hui-zong-1.md)
-    * [面试汇总2](offer/shou-ji/mian-shi-hui-zong-2.md)
+    * [面试汇总1](offer/shou-ji/mian-shi-hui-zong-2.md)
     * [如何解决消息队列的延时以及过期失效问题？消息队列满了以后该怎么处理？有几百万消息持续积压几小时，说说怎么解决？](offer/shou-ji/mian-shi-hui-zong-3.md)
     * [如何保证消息的可靠性传输（如何处理消息丢失的问题）？](offer/shou-ji/mian-shi-hui-zong-4.md)
     * [如何保证消息不被重复消费啊（如何保证消息消费时的幂等性）](offer/shou-ji/ru-he-bao-zheng-xiao-xi-bu-bei-zhong-fu-xiao-feia-ru-he-bao-zheng-xiao-xi-xiao-fei-shi-de-mi-deng-xi.md)

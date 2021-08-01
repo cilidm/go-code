@@ -2,7 +2,7 @@
 description: 为什么redis是单线程的但是还可以支撑高并发?
 ---
 
-# 面试汇总2
+# 面试汇总1
 
 （1）redis和memcached有啥区别
 
