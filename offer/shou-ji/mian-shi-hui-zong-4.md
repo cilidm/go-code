@@ -4,7 +4,7 @@ description: 如何保证消息的可靠性传输（如何处理消息丢失的�
 
 # 面试汇总4
 
-（1）rabbitmq
+## rabbitmq
 
 1）生产者弄丢了数据
 
@@ -36,7 +36,7 @@ rabbitmq如果丢失了数据，主要是因为你消费的时候，刚消费到
 
 ![](../../.gitbook/assets/tu-pian-%20%281%29.png)
 
-（2）kafka
+## kafka
 
 1）消费端弄丢了数据
 
