@@ -75,6 +75,7 @@
     * [面试汇总2](offer/shou-ji/mian-shi-hui-zong-2.md)
     * [面试汇总3](offer/shou-ji/mian-shi-hui-zong-3.md)
     * [面试汇总4](offer/shou-ji/mian-shi-hui-zong-4.md)
+    * [如何保证消息不被重复消费啊（如何保证消息消费时的幂等性）](offer/shou-ji/ru-he-bao-zheng-xiao-xi-bu-bei-zhong-fu-xiao-feia-ru-he-bao-zheng-xiao-xi-xiao-fei-shi-de-mi-deng-xi.md)
   * [Golang-Interview](offer/golang-interview/README.md)
     * [1-30](offer/golang-interview/1-30.md)
     * [31-60](offer/golang-interview/31-60.md)
