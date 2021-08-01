@@ -76,6 +76,7 @@
     * [如何解决消息队列的延时以及过期失效问题？消息队列满了以后该怎么处理？有几百万消息持续积压几小时，说说怎么解决？](offer/shou-ji/mian-shi-hui-zong-3.md)
     * [如何保证消息的可靠性传输（如何处理消息丢失的问题）？](offer/shou-ji/mian-shi-hui-zong-4.md)
     * [如何保证消息不被重复消费啊（如何保证消息消费时的幂等性）](offer/shou-ji/ru-he-bao-zheng-xiao-xi-bu-bei-zhong-fu-xiao-feia-ru-he-bao-zheng-xiao-xi-xiao-fei-shi-de-mi-deng-xi.md)
+    * [如何保证消息队列的高可用？](offer/shou-ji/ru-he-bao-zheng-xiao-xi-dui-lie-de-gao-ke-yong.md)
   * [Golang-Interview](offer/golang-interview/README.md)
     * [1-30](offer/golang-interview/1-30.md)
     * [31-60](offer/golang-interview/31-60.md)
