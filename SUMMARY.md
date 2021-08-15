@@ -2,6 +2,7 @@
 
 * [Go Python学习备忘](README.md)
 * [程序员在囧途](cheng-xu-yuan-zai-jiong-tu/README.md)
+  * [使用channel模拟实现锁](cheng-xu-yuan-zai-jiong-tu/shi-yong-channel-mo-ni-shi-xian-suo.md)
   * [数据结构](cheng-xu-yuan-zai-jiong-tu/shu-ju-jie-gou/README.md)
     * [单向链表和可视化](cheng-xu-yuan-zai-jiong-tu/shu-ju-jie-gou/dan-xiang-lian-biao-he-ke-shi-hua.md)
   * [设计模式](cheng-xu-yuan-zai-jiong-tu/she-ji-mo-shi/README.md)
