@@ -62,3 +62,49 @@ func EncryptZip(src, dst, passwd string) error {
 
 ```
 
+```go
+package zip
+
+import (
+	"fmt"
+	"github.com/alexmullins/zip"
+	"io"
+	"log"
+)
+
+func unzip(name, pwd string) (map[string][]byte, error) {
+	zipr, err := zip.OpenReader(name)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer zipr.Close()
+	var chunkMap = make(map[string][]byte)
+	for _, z := range zipr.File {
+		z.SetPassword(pwd)
+		rr, err := z.Open()
+		if err != nil {
+			return nil, err
+		}
+		var chunk []byte
+		buf := make([]byte, 1024)
+		for {
+			//从file读取到buf中
+			n, err := rr.Read(buf)
+			if err != nil && err != io.EOF {
+				fmt.Println("read buf fail", err)
+				break
+			}
+			//说明读取结束
+			if n == 0 {
+				break
+			}
+			//读取到最终的缓冲区中
+			chunk = append(chunk, buf[:n]...)
+		}
+		chunkMap[z.Name] = chunk
+	}
+	return chunkMap, nil
+}
+
+```
+
