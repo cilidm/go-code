@@ -11,7 +11,9 @@ sudo apt-get install \
     gnupg-agent \
     software-properties-common
     
-sudo curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | apt-key add -
+sudo curl -fsSL \ 
+    https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | apt-key \
+    add -
 
 sudo apt-key fingerprint 0EBFCD88
 
