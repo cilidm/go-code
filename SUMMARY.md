@@ -21,6 +21,7 @@
   * [压缩解压v2](pkg-bei-wang/ya-suo-jie-ya-v2.md)
   * [生成压缩包](pkg-bei-wang/sheng-cheng-ya-suo-bao.md)
   * [压缩包解压缩](pkg-bei-wang/ya-suo-bao-jie-ya-suo.md)
+  * [Linux](pkg-bei-wang/linux.md)
   * [Kafka](pkg-bei-wang/kafka/README.md)
     * [windows](pkg-bei-wang/kafka/windows.md)
   * [Golang 操作单向链表的应用实例](pkg-bei-wang/golang-cao-zuo-dan-xiang-lian-biao-de-ying-yong-shi-li.md)
