@@ -22,9 +22,17 @@ sudo apt-get update -y
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 # 配置国内源
-echo '{"registry-mirrors":["http://hub-mirror.c.163.com/"]}' >> /etc/docker/daemon.json
+echo '{
+    "registry-mirrors" : [
+    "https://registry.docker-cn.com",
+    "https://docker.mirrors.ustc.edu.cn",
+    "http://hub-mirror.c.163.com",
+    "https://cr.console.aliyun.com/"
+  ]
+}
+' >> /etc/docker/daemon.json
 
 service docker restart
-docker info|grep Mirrors -A 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+docker info|grep Mirrors -A 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 ```
 
