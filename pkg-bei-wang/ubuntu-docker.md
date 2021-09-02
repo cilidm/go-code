@@ -59,6 +59,8 @@ sudo yum-config-manager \
     http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo  
 
 sudo yum install -y docker-ce docker-ce-cli containerd.io 
+
+sudo systemctl enable docker
      
 sudo systemctl start docker
 
