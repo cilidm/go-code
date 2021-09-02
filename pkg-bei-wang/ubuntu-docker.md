@@ -2,7 +2,9 @@
 description: 'https://www.cnblogs.com/walker-lin/p/11214127.html'
 ---
 
-# ubuntu docker
+# docker
+
+## Ubuntu
 
 ```bash
 #!/bin/bash
@@ -22,9 +24,56 @@ sudo apt-get update -y
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 # 配置国内源
-echo '{"registry-mirrors":["http://hub-mirror.c.163.com/"]}' >> /etc/docker/daemon.json
+echo '{
+    "registry-mirrors" : [
+    "https://registry.docker-cn.com",
+    "https://docker.mirrors.ustc.edu.cn",
+    "http://hub-mirror.c.163.com",
+    "https://cr.console.aliyun.com/"
+  ]
+}
+' >> /etc/docker/daemon.json
 
 service docker restart
-docker info|grep Mirrors -A 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+docker info|grep Mirrors -A 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+```
+
+## Centos
+
+```bash
+sudo yum remove docker \
+    docker-client \
+    docker-client-latest \
+    docker-common \
+    docker-latest \
+    docker-latest-logrotate \
+    docker-logrotate \
+    docker-engine
+    
+sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+  
+sudo yum-config-manager \
+    --add-repo \
+    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo  
+
+sudo yum install docker-ce docker-ce-cli containerd.io 
+     
+sudo systemctl start docker
+
+# 关闭防火墙及其他
+
+systemctl stop firewalld && systemctl disable firewalld  
+
+setenforce 0
+
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+
+swapoff -a
+
+sudo systemctl daemon-reload
+
+sudo systemctl restart docker
 ```
 
