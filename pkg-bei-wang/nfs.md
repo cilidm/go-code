@@ -1,5 +1,7 @@
 # NFS
 
+## Ubuntu
+
 服务器端：
 
 ```bash
@@ -69,5 +71,26 @@ Export list for 192.168.1.93:
 ```bash
 sudo mount -t nfs -o nolock localhost:/home /mnt
                       # nfs-server-ip:/share-dir /local-dir
+```
+
+## Centos
+
+```bash
+sudo yum -y install nfs-utils
+sudo vi /etc/sysconfig/nfs
+sudo systemctl restart rpcbind.service 
+sudo systemctl restart nfs-server.service
+sudo  systemctl enable rpcbind.service
+sudo systemctl enable nfs-server.service
+sudo vi /etc/exports
+/opt/share  172.xx.xx.xx(ro,async) 172.xx.xx.xx(ro,async) 
+sudo systemctl restart nfs-server.service
+showmount -e localhost
+
+# 挂载
+mkdir -p  /opt/share
+mount -t nfs 172.xx.xx.xx:/opt/share  /opt/share
+
+ps aux|grep admin
 ```
 
