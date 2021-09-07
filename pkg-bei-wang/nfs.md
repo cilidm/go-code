@@ -3,13 +3,13 @@
 服务器端：
 
 ```bash
-sudo apt install nfs-kernel-server
+sudo apt install -y nfs-kernel-server
 ```
 
 客户端：
 
 ```bash
-sudo apt install nfs-common
+sudo apt install -y nfs-common
 ```
 
 修改配置文件
