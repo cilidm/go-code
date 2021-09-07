@@ -68,5 +68,6 @@ Export list for 192.168.1.93:
 
 ```bash
 sudo mount -t nfs -o nolock localhost:/home /mnt
+                      # nfs-server-ip:/share-dir /local-dir
 ```
 
