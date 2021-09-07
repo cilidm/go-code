@@ -17,6 +17,7 @@
   * [Gin模拟大文件上传 分片存储 分片显示](cheng-xu-yuan-zai-jiong-tu/gin-mo-ni-da-wen-jian-shang-chuan-fen-pian-cun-chu-fen-pian-xian-shi.md)
   * [使用go1.6内嵌资源构建静态服务](cheng-xu-yuan-zai-jiong-tu/shi-yong-go1.6-nei-qian-zi-yuan-gou-jian-jing-tai-fu-wu.md)
 * [PKG备忘](pkg-bei-wang/README.md)
+  * [NFS](pkg-bei-wang/nfs.md)
   * [kubectl](pkg-bei-wang/kubectl.md)
   * [docker](pkg-bei-wang/ubuntu-docker.md)
   * [压缩解压v2](pkg-bei-wang/ya-suo-jie-ya-v2.md)
