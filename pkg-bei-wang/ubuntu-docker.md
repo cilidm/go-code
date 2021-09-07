@@ -79,9 +79,3 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-## 其他
-
-```bash
-echo "your-ip your-domain-name" >> /etc/hosts
-```
-
