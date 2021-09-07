@@ -41,6 +41,12 @@ sudo vim /etc/exports
 sudo /etc/init.d/nfs-kernel-server restart
 ```
 
+查看
+
+```bash
+showmount -e localhost
+```
+
 到此，nfs的服务就搭建好了。
 
 下面介绍客户端如何访问服务器
