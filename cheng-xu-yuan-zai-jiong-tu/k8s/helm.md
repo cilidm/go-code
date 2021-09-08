@@ -37,5 +37,12 @@ helm install my  mygin -n myweb
 helm install my mygin --dry-run --debug 
 ```
 
+### 处理helm报错
+
+```bash
+chmod g-rw /home/kubectl/config
+chmod o-r  /home/kubectl/config
+```
+
 
 
