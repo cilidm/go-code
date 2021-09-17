@@ -38,6 +38,16 @@ service docker restart
 docker info|grep Mirrors -A 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 ```
 
+```bash
+echo '{
+    "registry-mirrors" : [
+    "http://hub-mirror.c.163.com",
+    "https://cr.console.aliyun.com/"
+  ]
+}
+' >> /etc/docker/daemon.json
+```
+
 ## Centos
 
 ```bash
