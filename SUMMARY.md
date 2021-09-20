@@ -7,6 +7,8 @@
     * [kubectl](cheng-xu-yuan-zai-jiong-tu/k8s/kubectl.md)
     * [NFS](cheng-xu-yuan-zai-jiong-tu/k8s/nfs.md)
     * [helm](cheng-xu-yuan-zai-jiong-tu/k8s/helm.md)
+    * [问题记录](cheng-xu-yuan-zai-jiong-tu/k8s/wen-ti-ji-lu/README.md)
+      * [创建自定义ingress报错](cheng-xu-yuan-zai-jiong-tu/k8s/wen-ti-ji-lu/chuang-jian-zi-ding-yi-ingress-bao-cuo.md)
   * [使用channel模拟实现锁](cheng-xu-yuan-zai-jiong-tu/shi-yong-channel-mo-ni-shi-xian-suo.md)
   * [数据结构](cheng-xu-yuan-zai-jiong-tu/shu-ju-jie-gou/README.md)
     * [单向链表和可视化](cheng-xu-yuan-zai-jiong-tu/shu-ju-jie-gou/dan-xiang-lian-biao-he-ke-shi-hua.md)
