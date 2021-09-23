@@ -191,4 +191,8 @@
   * [搜索elasticsearch的数据条数大于10000的情况解决](elasticsearch/sou-suo-elasticsearch-de-shu-ju-tiao-shu-da-yu-10000-de-qing-kuang-jie-jue.md)
 * [Go+Python双语言混合开发](go+python-shuang-yu-yan-hun-he-kai-fa/README.md)
   * [匿名变量](go+python-shuang-yu-yan-hun-he-kai-fa/ni-ming-bian-liang.md)
+* [K8s](k8s/README.md)
+  * [kubectl](k8s/kubectl.md)
+  * [kubeadm](k8s/kubeadm.md)
+  * [Helm3](k8s/helm3.md)
 
