@@ -1,6 +1,6 @@
-# kubectl
+# kubectl常用命令
 
-![](../.gitbook/assets/1320926-20190907221137552-482221977.png)
+![](../../.gitbook/assets/1320926-20190907221137552-482221977.png)
 
 ### 基础命令：create，delete，get，run，expose，set，explain，edit。 <a id="&#x57FA;&#x7840;&#x547D;&#x4EE4;&#xFF1A;create&#xFF0C;delete&#xFF0C;get&#xFF0C;run&#xFF0C;expose&#xFF0C;set&#xFF0C;explain&#xFF0C;edit&#x3002;"></a>
 
