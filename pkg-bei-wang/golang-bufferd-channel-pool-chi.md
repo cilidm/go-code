@@ -3,6 +3,60 @@
 ```go
 package main
 
+import (
+	"fmt"
+	"sync"
+	"time"
+)
+
+type Pool struct {
+	queue chan int
+	wg    *sync.WaitGroup
+}
+
+func NewPool(size int) *Pool {
+	if size <= 0 {
+		size = 1
+	}
+	return &Pool{queue: make(chan int, size), wg: &sync.WaitGroup{}}
+}
+
+func (this *Pool) Add(size int) {
+	for i := 0; i < size; i++ { // size > 0
+		this.queue <- 1
+	}
+	for i := 0; i > size; i-- { // size < 0
+		<-this.queue
+	}
+	this.wg.Add(size)
+}
+
+func (this *Pool) Done() {
+	<-this.queue
+	this.wg.Done()
+}
+
+func (this *Pool) Wait() {
+	this.wg.Wait()
+}
+
+func main() {
+	pool := NewPool(15)
+	for i := 1; i <= 500; i++ {
+		pool.Add(1)
+		go func(i int) {
+			defer pool.Done()
+			fmt.Println(i)
+			time.Sleep(time.Second)
+		}(i)
+	}
+	pool.Wait()
+}
+```
+
+```go
+package main
+
 // ---------------Worker---------------
 
 type Worker struct {
@@ -90,60 +144,5 @@ func main() {
 
     // 友情提示：该代码接近伪码，不知直接运行
 }
-```
-
-```go
-package main
-
-import (
-	"fmt"
-	"sync"
-	"time"
-)
-
-type Pool struct {
-	queue chan int
-	wg    *sync.WaitGroup
-}
-
-func NewPool(size int) *Pool {
-	if size <= 0 {
-		size = 1
-	}
-	return &Pool{queue: make(chan int, size), wg: &sync.WaitGroup{}}
-}
-
-func (this *Pool) Add(size int) {
-	for i := 0; i < size; i++ { // size > 0
-		this.queue <- 1
-	}
-	for i := 0; i > size; i-- { // size < 0
-		<-this.queue
-	}
-	this.wg.Add(size)
-}
-
-func (this *Pool) Done() {
-	<-this.queue
-	this.wg.Done()
-}
-
-func (this *Pool) Wait() {
-	this.wg.Wait()
-}
-
-func main() {
-	pool := NewPool(15)
-	for i := 1; i <= 500; i++ {
-		pool.Add(1)
-		go func(i int) {
-			defer pool.Done()
-			fmt.Println(i)
-			time.Sleep(time.Second)
-		}(i)
-	}
-	pool.Wait()
-}
-
 ```
 
