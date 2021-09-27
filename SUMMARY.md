@@ -4,6 +4,7 @@
 * [程序员在囧途](cheng-xu-yuan-zai-jiong-tu/README.md)
   * [k8s](cheng-xu-yuan-zai-jiong-tu/k8s/README.md)
     * [docker](cheng-xu-yuan-zai-jiong-tu/k8s/ubuntu-docker.md)
+    * [kubeadm](cheng-xu-yuan-zai-jiong-tu/k8s/kubeadm.md)
     * [kubectl](cheng-xu-yuan-zai-jiong-tu/k8s/kubectl.md)
     * [NFS](cheng-xu-yuan-zai-jiong-tu/k8s/nfs.md)
     * [helm](cheng-xu-yuan-zai-jiong-tu/k8s/helm.md)
