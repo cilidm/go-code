@@ -1,5 +1,7 @@
 # kubeadm
 
+## docker安装
+
 ```bash
 # 先安装docker
 # 省略
@@ -16,7 +18,7 @@ rpm -aq kubelet kubectl kubeadm
 sudo systemctl enable kubelet
 ```
 
-### Kubeadm
+## Kubeadm
 
 #### Kubeadm init: 集群的快速初始化，部署Master节点的各个组件
 
@@ -82,7 +84,7 @@ sudo sysctl net.bridge.bridge-nf-call-iptables=1
 
 ```
 
-其他问题可参考页面
+## 其他问题可参考页面
 
 [https://blog.csdn.net/baidu\_38432732/article/details/105662626](https://blog.csdn.net/baidu_38432732/article/details/105662626)
 
