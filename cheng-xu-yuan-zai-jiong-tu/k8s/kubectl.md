@@ -41,7 +41,7 @@ apt-cache madison kubeadm kubelet kubectl
 ```bash
 apt install  kubectl kubelet kubeadm -y
 或者指定版本安装
-apt-get install -y kubelet=1.18.14-00
+apt-get install -y kubelet=1.18.6-00 kubectl=1.18.6-00 kubeadm=1.18.6-00
 ```
 
 ### 第三步、开机自启
@@ -104,6 +104,10 @@ echo "export KUBECONFIG=/etc/kubernetes/admin.conf" >> /etc/profile
 source /etc/profile
 # 普通用户
 echo "export KUBECONFIG=/home/ubuntu/kubectl/config" >> ~/.bash_profile
+source ~/.bash_profile
+
+# 复制仪表盘kubeconfig到~/.kube/config 然后执行
+echo "export KUBECONFIG=~/.kube/config" >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
