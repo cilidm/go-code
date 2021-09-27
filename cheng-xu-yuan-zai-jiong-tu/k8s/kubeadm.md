@@ -1,6 +1,25 @@
 # kubeadm
 
-## docker安装
+## ubuntu 安装\(版本有问题\)
+
+```bash
+sudo apt-get update && sudo apt-get install -y apt-transport-https curl
+
+sudo curl -s https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg | sudo apt-key add -
+
+sudo tee /etc/apt/sources.list.d/kubernetes.list <<-'EOF'
+deb https://mirrors.aliyun.com/kubernetes/apt kubernetes-xenial main
+EOF
+
+sudo apt-get update
+
+sudo apt-get install -y kubelet=1.18.6 kubeadm=1.18.6 kubectl=1.18.6
+sudo apt-mark hold kubelet=1.12.8-00 kubeadm=1.12.8-00 kubectl=1.12.8-00
+
+sudo systemctl enable kubelet && sudo systemctl start kubelet
+```
+
+## centos 安装
 
 ```bash
 # 先安装docker
