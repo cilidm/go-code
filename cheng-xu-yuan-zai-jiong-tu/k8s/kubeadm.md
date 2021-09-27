@@ -1,6 +1,6 @@
 # kubeadm
 
-## ubuntu 安装\(版本有问题\)
+## ubuntu 安装\(版本有问题\)  ubuntu走kubectl页面
 
 ```bash
 sudo apt-get update && sudo apt-get install -y apt-transport-https curl
