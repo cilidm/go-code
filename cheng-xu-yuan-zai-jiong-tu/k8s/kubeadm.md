@@ -30,23 +30,28 @@ sudo systemctl enable kubelet
 
 ```bash
 # 每台机器上都要执行：
- systemctl enable docker.service
+systemctl enable docker.service
+
+# 使用systemd作为docker的cgroup driver
+sudo vi  /etc/docker/daemon.json    #（没有则创建）
+
+{"exec-opts": ["native.cgroupdriver=systemd"]}
+
+# 重启docker
+systemctl daemon-reload  && systemctl restart docker
+
+# 确保执行这句命令 出来的值是 systemd
+docker info |grep Cgroup
+
+# 初始化集群
+# master执行
+sudo kubeadm init --kubernetes-version=v1.18.6  --image-repository registry.aliyuncs.com/google_containers
  
- # 使用systemd作为docker的cgroup driver
- sudo vi  /etc/docker/daemon.json    #（没有则创建）
- 
- {"exec-opts": ["native.cgroupdriver=systemd"]}
- 
- # 重启docker
- systemctl daemon-reload  && systemctl restart docker
- 
- # 确保执行这句命令 出来的值是 systemd
- docker info |grep Cgroup
- 
- # 初始化集群
- # master执行
- sudo kubeadm init --kubernetes-version=v1.18.6  --image-repository registry.aliyuncs.com/google_containers
- 
+# 其他
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
 #  查看token列表 
 sudo kubeadm token list
 
