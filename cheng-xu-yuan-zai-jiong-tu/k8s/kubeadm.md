@@ -33,9 +33,7 @@ sudo systemctl enable kubelet
  # 使用systemd作为docker的cgroup driver
  sudo vi  /etc/docker/daemon.json    #（没有则创建）
  
- {  
-   "exec-opts": ["native.cgroupdriver=systemd"]
- }
+ {"exec-opts": ["native.cgroupdriver=systemd"]}
  
  # 重启docker
  systemctl daemon-reload  && systemctl restart docker
@@ -76,9 +74,15 @@ kubectl taint nodes --all node-role.kubernetes.io/master-
 # 子节点执行
 sudo sysctl net.bridge.bridge-nf-call-iptables=1
 
+# 子节点加入节点  省略...
+
 
 
 
 
 ```
+
+其他问题可参考页面
+
+[https://blog.csdn.net/baidu\_38432732/article/details/105662626](https://blog.csdn.net/baidu_38432732/article/details/105662626)
 
