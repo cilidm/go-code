@@ -17,6 +17,16 @@ sudo apt-get install -y kubelet=1.18.6 kubeadm=1.18.6 kubectl=1.18.6
 sudo apt-mark hold kubelet=1.12.8-00 kubeadm=1.12.8-00 kubectl=1.12.8-00
 
 sudo systemctl enable kubelet && sudo systemctl start kubelet
+
+# 关闭 swap
+sudo swapoff -a
+# 关闭防火墙
+sudo ufw disable
+
+# kubeadm初始化之后执行
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 ## centos 安装
