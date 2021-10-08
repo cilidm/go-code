@@ -2,6 +2,8 @@
 
 * [Go Python学习备忘](README.md)
 * [程序员在囧途](cheng-xu-yuan-zai-jiong-tu/README.md)
+  * [保存](cheng-xu-yuan-zai-jiong-tu/bao-cun/README.md)
+    * [数据同步：主从库如何实现数据一致](cheng-xu-yuan-zai-jiong-tu/bao-cun/shu-ju-tong-bu-zhu-cong-ku-ru-he-shi-xian-shu-ju-yi-zhi.md)
   * [k8s](cheng-xu-yuan-zai-jiong-tu/k8s/README.md)
     * [docker](cheng-xu-yuan-zai-jiong-tu/k8s/ubuntu-docker.md)
     * [kubeadm](cheng-xu-yuan-zai-jiong-tu/k8s/kubeadm.md)
