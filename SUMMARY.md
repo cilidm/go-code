@@ -8,6 +8,7 @@
     * [哨兵集群：哨兵挂了，主从库还能切换吗](cheng-xu-yuan-zai-jiong-tu/bao-cun/shao-bing-ji-qun-shao-bing-gua-le-zhu-cong-ku-hai-neng-qie-huan-ma.md)
     * [切片集群：数据增多了，是该加内存还是加实例](cheng-xu-yuan-zai-jiong-tu/bao-cun/qie-pian-ji-qun-shu-ju-zeng-duo-le-shi-gai-jia-nei-cun-hai-shi-jia-shi-li.md)
     * [华为云安装docker](cheng-xu-yuan-zai-jiong-tu/bao-cun/hua-wei-yun-an-zhuang-docker.md)
+    * [Kafka生产环境注意事项](cheng-xu-yuan-zai-jiong-tu/bao-cun/kafka-sheng-chan-huan-jing-zhu-yi-shi-xiang.md)
     * [Docker常用命令](cheng-xu-yuan-zai-jiong-tu/bao-cun/docker-chang-yong-ming-ling.md)
     * [分布式专题](cheng-xu-yuan-zai-jiong-tu/bao-cun/fen-bu-shi-zhuan-ti.md)
   * [k8s](cheng-xu-yuan-zai-jiong-tu/k8s/README.md)
