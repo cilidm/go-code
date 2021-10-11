@@ -14,6 +14,7 @@
     * [Docker常用命令](cheng-xu-yuan-zai-jiong-tu/bao-cun/docker-chang-yong-ming-ling.md)
     * [分布式专题](cheng-xu-yuan-zai-jiong-tu/bao-cun/fen-bu-shi-zhuan-ti.md)
   * [k8s](cheng-xu-yuan-zai-jiong-tu/k8s/README.md)
+    * [k8s相关](cheng-xu-yuan-zai-jiong-tu/k8s/k8s-xiang-guan.md)
     * [docker](cheng-xu-yuan-zai-jiong-tu/k8s/ubuntu-docker.md)
     * [kubeadm](cheng-xu-yuan-zai-jiong-tu/k8s/kubeadm.md)
     * [kubectl](cheng-xu-yuan-zai-jiong-tu/k8s/kubectl.md)
@@ -171,7 +172,7 @@
       * [课代表总结](offer/javafamily/redis/ke-dai-biao-zong-jie.md)
       * [秒杀系统设计](offer/javafamily/redis/miao-sha-xi-tong-she-ji.md)
       * [redis基础](offer/javafamily/redis/redis-ji-chu.md)
-  * [interview\_internal\_reference](offer/interview_internal_reference/README.md)
+  * [interview_internal_reference](offer/interview_internal_reference/README.md)
     * [算法篇](offer/interview_internal_reference/suan-fa-pian/README.md)
       * [算法](offer/interview_internal_reference/suan-fa-pian/suan-fa.md)
     * [问答篇](offer/interview_internal_reference/wen-da-pian/README.md)
@@ -208,4 +209,3 @@
     * [kubectl常用命令](k8s/kubectl-1/kubectl.md)
   * [kubeadm](k8s/kubeadm.md)
   * [Helm3](k8s/helm3.md)
-
