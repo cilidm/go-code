@@ -211,3 +211,8 @@
     * [kubectl常用命令](k8s/kubectl-1/kubectl.md)
   * [kubeadm](k8s/kubeadm.md)
   * [Helm3](k8s/helm3.md)
+* [kubernetes指南](kubernetes-zhi-nan/README.md)
+  * [部署配置](kubernetes-zhi-nan/bu-shu-pei-zhi/README.md)
+    * [kubectl 安装](kubernetes-zhi-nan/bu-shu-pei-zhi/kubectl-an-zhuang.md)
+  * [核心组件](kubernetes-zhi-nan/he-xin-zu-jian/README.md)
+    * [kubectl](kubernetes-zhi-nan/he-xin-zu-jian/kubectl.md)
