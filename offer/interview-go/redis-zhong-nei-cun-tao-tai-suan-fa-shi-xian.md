@@ -16,17 +16,16 @@ Redis 3.0中已有淘汰机制：
 * volatile-ttl
 
 | maxmemory-policy | 含义 | 特性 |
-| :--- | :--- | :--- |
+| ---------------- | -- | -- |
 
+noeviction |不淘汰 |内存超限后写命令会返回错误(如OOM, del命令除外)\
+allkeys-lru |所有key的LRU机制 在|所有key中按照最近最少使用LRU原则剔除key，释放空间\
+volatile-lru |易失key的LRU |仅以设置过期时间key范围内的LRU(如均为设置过期时间，则不会淘汰)\
+allkeys-random |所有key随机淘汰| 一视同仁，随机\
+volatile-random |易失Key的随机 |仅设置过期时间key范围内的随机\
+volatile-ttl |易失key的TTL淘汰| 按最小TTL的key优先淘汰
 
-noeviction \|不淘汰 \|内存超限后写命令会返回错误\(如OOM, del命令除外\)  
-allkeys-lru \|所有key的LRU机制 在\|所有key中按照最近最少使用LRU原则剔除key，释放空间  
-volatile-lru \|易失key的LRU \|仅以设置过期时间key范围内的LRU\(如均为设置过期时间，则不会淘汰\)  
-allkeys-random \|所有key随机淘汰\| 一视同仁，随机  
-volatile-random \|易失Key的随机 \|仅设置过期时间key范围内的随机  
-volatile-ttl \|易失key的TTL淘汰\| 按最小TTL的key优先淘汰
-
-其中LRU\(less recently used\)经典淘汰算法在Redis实现中有一定优化设计，来保证内存占用与实际效果的平衡，这也体现了工程应用是空间与时间的平衡性。
+其中LRU(less recently used)经典淘汰算法在Redis实现中有一定优化设计，来保证内存占用与实际效果的平衡，这也体现了工程应用是空间与时间的平衡性。
 
 > PS：值得注意的，在主从复制模式Replication下，从节点达到maxmemory时不会有任何异常日志信息，但现象为增量数据无法同步至从节点。
 
@@ -40,8 +39,6 @@ Redis 3.0中近似LRU算法通过增加待淘汰元素池的方式进一步优�
 
 以下是理论LRU和近似LRU的效果对比：
 
-![](../images/lru_comparison.png)
-
 * 按时间顺序接入不同键，此时最早写入也就是最佳淘汰键
 * 浅灰色区域：被淘汰的键
 * 灰色区域：未被淘汰的键
@@ -50,9 +47,9 @@ Redis 3.0中近似LRU算法通过增加待淘汰元素池的方式进一步优�
 总结图中展示规律，
 
 * 图1Theoretical LRU符合预期：最早写入键逐步被淘汰
-* 图2Approx LRU Redis 3.0 10 samples：Redis 3.0中近似LRU算法\(采样值为10\)
-* 图3Approx LRU Redis 2.8 5 samples：Redis 2.8中近似LRU算法\(采样值为5\)
-* 图4Approx LRU Redis 3.0 5 samples：Redis 3.0中近似LRU算法\(采样值为5\)
+* 图2Approx LRU Redis 3.0 10 samples：Redis 3.0中近似LRU算法(采样值为10)
+* 图3Approx LRU Redis 2.8 5 samples：Redis 2.8中近似LRU算法(采样值为5)
+* 图4Approx LRU Redis 3.0 5 samples：Redis 3.0中近似LRU算法(采样值为5)
 
 结论：
 
@@ -60,11 +57,11 @@ Redis 3.0中近似LRU算法通过增加待淘汰元素池的方式进一步优�
 * 通过图4和图2对比：得出增加采样值，在3.0中将进一步改善LRU淘汰效果逼近理论LRU
 * 对比图2和图1：在3.0中采样值为10时，效果非常接近理论LRU
 
-采样值设置通过maxmemory-samples指定，可通过CONFIG SET maxmemory-samples 动态设置，也可启动配置中指定maxmemory-samples 
+采样值设置通过maxmemory-samples指定，可通过CONFIG SET maxmemory-samples 动态设置，也可启动配置中指定maxmemory-samples&#x20;
 
 源码解析
 
-```text
+```
 int freeMemoryIfNeeded(void){
     while (mem_freed < mem_tofree) {
         if (server.maxmemory_policy == REDIS_MAXMEMORY_NO_EVICTION)
@@ -140,7 +137,7 @@ int freeMemoryIfNeeded(void){
 
 ### Redis 4.0中新的LFU算法
 
-从Redis4.0开始，新增LFU淘汰机制，提供更好缓存命中率。LFU\(Least Frequently Used\)通过记录键使用频率来定位最可能淘汰的键。
+从Redis4.0开始，新增LFU淘汰机制，提供更好缓存命中率。LFU(Least Frequently Used)通过记录键使用频率来定位最可能淘汰的键。
 
 对比LRU与LFU的差别：
 
@@ -160,4 +157,3 @@ LFU使用Morris counters计数器占用少量位数来评估每个对象的访�
 这两个因子形成一种平衡，通过少量访问 VS 多次访问 的评价标准最终形成对键重要性的评判。
 
 > 原文： [http://fivezh.github.io/2019/01/10/Redis-LRU-algorithm/](http://fivezh.github.io/2019/01/10/Redis-LRU-algorithm/)
-

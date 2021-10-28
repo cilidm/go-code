@@ -1,14 +1,14 @@
 ---
-description: 'Go语言HttpRequest项目源码地址： https://github.com/kirinlabs/HttpRequest'
+description: Go语言HttpRequest项目源码地址： https://github.com/kirinlabs/HttpRequest
 ---
 
 # HttpRequest
 
- 具有快速**构建Headers**、**Cookies**、**设置超时时间**、**请求、耗时、打印请求信息**等功能
+&#x20;具有快速**构建Headers**、**Cookies**、**设置超时时间**、**请求、耗时、打印请求信息**等功能
 
 
 
-#### **安装：** <a id="%E5%AE%89%E8%A3%85%EF%BC%9A"></a>
+#### **安装：** <a href="e5-ae-89-e8-a3-85-ef-bc-9a" id="e5-ae-89-e8-a3-85-ef-bc-9a"></a>
 
 ```go
 go get https://github.com/kirinlabs/HttpRequest
@@ -32,9 +32,9 @@ req := HttpRequest.NewRequest()
 res,err := req.Get("https://api.github.com/events") 
 ```
 
-返回一个res的Response对象和err的Error对象 
+返回一个res的Response对象和err的Error对象&#x20;
 
-#### 自定义Transport <a id="%E8%87%AA%E5%AE%9A%E4%B9%89Transport"></a>
+#### 自定义Transport <a href="e8-87-aa-e5-ae-9a-e4-b9-89transport" id="e8-87-aa-e5-ae-9a-e4-b9-89transport"></a>
 
 ```go
 var transport *http.Transport
@@ -94,7 +94,7 @@ res.err := req.Post("https://www.baidu.com",map[string]interface{}{
 })
 ```
 
-  也可以**不用实例化**，**直接发送请求**
+&#x20; 也可以**不用实例化**，**直接发送请求**
 
 ```go
 //快速发送Get请求
@@ -133,9 +133,9 @@ res,err := HttpRequest.JSON().Post("https://www.baidu.com",map[string]interface{
 res,err := HttpRequest.JSON().Post("https://www.baidu.com",`{"title":"baidu","type":"pdf"}`)
 ```
 
-传递URL参数 
+传递URL参数&#x20;
 
-你想为URL的查询字符串\(query string\)传递数据。如：手工构建URL,`http://www.baidu.com/index?key=value。`HttpRequest允许你使用第2个参数以字符串`"id=100&name=github"`或`map[string]interface{}{"id":10,"name":"github"}`字典的形式把数据传递给URL：
+你想为URL的查询字符串(query string)传递数据。如：手工构建URL,`http://www.baidu.com/index?key=value。`HttpRequest允许你使用第2个参数以字符串`"id=100&name=github"`或`map[string]interface{}{"id":10,"name":"github"}`字典的形式把数据传递给URL：
 
 手工传参：
 
@@ -160,7 +160,7 @@ res,err := req.Get("https://www.baidu.com/index?name=github",map[string]interfac
 
 
 
-#### 响应内容 <a id="%E5%93%8D%E5%BA%94%E5%86%85%E5%AE%B9"></a>
+#### 响应内容 <a href="e5-93-8d-e5-ba-94-e5-86-85-e5-ae-b9" id="e5-93-8d-e5-ba-94-e5-86-85-e5-ae-b9"></a>
 
 能读取服务器响应的内容
 
@@ -168,7 +168,7 @@ res,err := req.Get("https://www.baidu.com/index?name=github",map[string]interfac
 res,err := req.Post("https://api.github.com/events")
 ```
 
- 获取服务器返回的内容：
+&#x20;获取服务器返回的内容：
 
 ```go
 body,err := res.Body() 
@@ -187,15 +187,15 @@ res.StatusCode()
 res.Headers()
 ```
 
-返回一个map\[string\]string的字典
+返回一个map\[string]string的字典
 
 获取请求响应时间：
 
-```text
+```
 res.Time()
 ```
 
-Json响应内容 
+Json响应内容&#x20;
 
 HttpRequest内置JSON解码，来解析JSON数据：
 
@@ -206,11 +206,11 @@ body, err := res.Json()
 fmt.Println(body)
 ```
 
- 如果JSON解码失败，会返回一个err错误
+&#x20;如果JSON解码失败，会返回一个err错误
 
-**定制请求头** 
+**定制请求头 **
 
-如果想为请求添加HTTP头部信息，只需要简单的传一个map给SetHeaders方法 
+如果想为请求添加HTTP头部信息，只需要简单的传一个map给SetHeaders方法&#x20;
 
 ```go
 req.SetHeaders(map[string]string{
@@ -221,7 +221,7 @@ req.SetHeaders(map[string]string{
 
 注：所有header值必须是字符串，SetHeaders可以多次调用，如果Key重复则会覆盖前面设置的值
 
-#### BasicAuth 认证 <a id="BasicAuth%20%E8%AE%A4%E8%AF%81"></a>
+#### BasicAuth 认证 <a href="basicauth-20-e8-ae-a4-e8-af-81" id="basicauth-20-e8-ae-a4-e8-af-81"></a>
 
 如果想为请求添加HTTP头部信息，只需要简单的传一个map给SetHeaders方法
 
@@ -229,7 +229,7 @@ req.SetHeaders(map[string]string{
 req.SetBasicAuth("username","password")
 ```
 
-#### CookieJar <a id="CookieJar"></a>
+#### CookieJar <a href="cookiejar" id="cookiejar"></a>
 
 ```go
 j, _ := cookiejar.New(nil)
@@ -247,7 +247,7 @@ if err != nil {
 }
 ```
 
-#### Proxy代理 <a id="Proxy%E4%BB%A3%E7%90%86"></a>
+#### Proxy代理 <a href="proxy-e4-bb-a3-e7-90-86" id="proxy-e4-bb-a3-e7-90-86"></a>
 
 通过代理Ip访问
 
@@ -269,7 +269,7 @@ if err != nil {
 log.Println(string(body))
 ```
 
-#### JSON请求 <a id="JSON%E8%AF%B7%E6%B1%82"></a>
+#### JSON请求 <a href="json-e8-af-b7-e6-b1-82" id="json-e8-af-b7-e6-b1-82"></a>
 
 如果想以json方式发送请求，HttpRequest支持2种方式
 
@@ -281,7 +281,7 @@ req.SetHeaders(map[string]string{"Content-Type":"application/json"})
 req.Post("https://www.baidu.com","{\"name\":\"github\"}")
 ```
 
-调用req.JSON\(\)内置方法
+调用req.JSON()内置方法
 
 ```go
 //直接发磅Json字符串参数
@@ -293,7 +293,7 @@ res,err := req.JSON().Post("https://www.baidu.com",map[string]interface{}{
 })
 ```
 
-#### Cookie <a id="Cookie"></a>
+#### Cookie <a href="cookie" id="cookie"></a>
 
 ```go
 req.SetCookies(map[string]string{
@@ -301,13 +301,13 @@ req.SetCookies(map[string]string{
 })
 ```
 
-#### 超时   <a id="%E8%B6%85%E6%97%B6%C2%A0%20%C2%A0"></a>
+#### 超时   <a href="e8-b6-85-e6-97-b6-c2-a0-20-c2-a0" id="e8-b6-85-e6-97-b6-c2-a0-20-c2-a0"></a>
 
-```text
+```
  req.SetTimeout(5)
 ```
 
-#### 关闭证书验证 <a id="%E5%85%B3%E9%97%AD%E8%AF%81%E4%B9%A6%E9%AA%8C%E8%AF%81"></a>
+#### 关闭证书验证 <a href="e5-85-b3-e9-97-ad-e8-af-81-e4-b9-a6-e9-aa-8c-e8-af-81" id="e5-85-b3-e9-97-ad-e8-af-81-e4-b9-a6-e9-aa-8c-e8-af-81"></a>
 
 当请求https协议时提示`x509: certificate signed by unknown authority`时，[可关闭证书验证](https://blog.bbzhh.com/index.php/archives/150.html)
 
@@ -315,13 +315,13 @@ req.SetCookies(map[string]string{
  req.SetTLSClient(&tls.Config{InsecureSkipVerify: true})
 ```
 
-#### 调试模式 <a id="%E8%B0%83%E8%AF%95%E6%A8%A1%E5%BC%8F"></a>
+#### 调试模式 <a href="e8-b0-83-e8-af-95-e6-a8-a1-e5-bc-8f" id="e8-b0-83-e8-af-95-e6-a8-a1-e5-bc-8f"></a>
 
-```text
+```
 req.Debug(true)
 ```
 
-#### 连接操作 <a id="%E8%BF%9E%E6%8E%A5%E6%93%8D%E4%BD%9C"></a>
+#### 连接操作 <a href="e8-bf-9e-e6-8e-a5-e6-93-8d-e4-bd-9c" id="e8-bf-9e-e6-8e-a5-e6-93-8d-e4-bd-9c"></a>
 
 而且还支持连接操作
 
@@ -329,11 +329,11 @@ req.Debug(true)
 req := HttpRequest.NewRequest().Debug(true).SetTimeout(5).SetHeader()
 ```
 
-**Respone对象** 
+**Respone对象 **
 
 获取返回的Response对象
 
-```text
+```
 resp.Response() 
 ```
 
@@ -345,27 +345,27 @@ resp.StatusCode()
 
 **获取Body主体信息**
 
-```text
+```
 resp.Body()
 ```
 
-返回\[\]byte和error
+返回\[]byte和error
 
 **获取请求耗时**
 
-```text
+```
 resp.Time() string
 ```
 
-单位是毫秒 
+单位是毫秒&#x20;
 
 **获取真实Url**
 
-```text
+```
 res.Url()
 ```
 
-#### 实例代码 <a id="%E5%AE%9E%E4%BE%8B%E4%BB%A3%E7%A0%81"></a>
+#### 实例代码 <a href="e5-ae-9e-e4-be-8b-e4-bb-a3-e7-a0-81" id="e5-ae-9e-e4-be-8b-e4-bb-a3-e7-a0-81"></a>
 
 ```go
 package main
@@ -441,4 +441,3 @@ func main() {
    }
 }
 ```
-

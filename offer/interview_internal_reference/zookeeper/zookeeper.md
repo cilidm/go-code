@@ -103,7 +103,7 @@ client端会对某个znode建立一个watcher事件，当该znode发生变化时
 
 **获取分布式锁的流程**
 
-在获取分布式锁的时候在locker节点下创建临时顺序节点，释放锁的时候删除该临时节点。客户端调用createNode方法在locker下创建临时顺序节点， 然后调用getChildren\(“locker”\)来获取locker下面的所有子节点，注意此时不用设置任何Watcher。客户端获取到所有的子节点path之后，如果发现自己创建的节点在所有创建的子节点序号最小，那么就认为该客户端获取到了锁。如果发现自己创建的节点并非locker所有子节点中最小的，说明自己还没有获取到锁，此时客户端需要找到比自己小的那个节点，然后对其调用exist\(\)方法，同时对其注册事件监听器。之后，让这个被关注的节点删除，则客户端的Watcher会收到相应通知，此时再次判断自己创建的节点是否是locker子节点中序号最小的，如果是则获取到了锁，如果不是则重复以上步骤继续获取到比自己小的一个节点并注册监听。当前这个过程中还需要许多的逻辑判断。
+在获取分布式锁的时候在locker节点下创建临时顺序节点，释放锁的时候删除该临时节点。客户端调用createNode方法在locker下创建临时顺序节点， 然后调用getChildren(“locker”)来获取locker下面的所有子节点，注意此时不用设置任何Watcher。客户端获取到所有的子节点path之后，如果发现自己创建的节点在所有创建的子节点序号最小，那么就认为该客户端获取到了锁。如果发现自己创建的节点并非locker所有子节点中最小的，说明自己还没有获取到锁，此时客户端需要找到比自己小的那个节点，然后对其调用exist()方法，同时对其注册事件监听器。之后，让这个被关注的节点删除，则客户端的Watcher会收到相应通知，此时再次判断自己创建的节点是否是locker子节点中序号最小的，如果是则获取到了锁，如果不是则重复以上步骤继续获取到比自己小的一个节点并注册监听。当前这个过程中还需要许多的逻辑判断。
 
 代码的实现主要是基于互斥锁，获取分布式锁的重点逻辑在于BaseDistributedLock，实现了基于Zookeeper实现分布式锁的细节。
 
@@ -121,17 +121,17 @@ client端会对某个znode建立一个watcher事件，当该znode发生变化时
 
 **参考答案：**
 
-Zookeeper作为一个集群提供一致的数据服务，自然，它要在所有机器间做数据复制。   
- 数据复制的好处：   
- 1、容错：一个节点出错，不致于让整个系统停止工作，别的节点可以接管它的工作；   
- 2、提高系统的扩展能力 ：把负载分布到多个节点上，或者增加节点来提高系统的负载能力；   
- 3、提高性能：让客户端本地访问就近的节点，提高用户访问速度。   
-   
+Zookeeper作为一个集群提供一致的数据服务，自然，它要在所有机器间做数据复制。 \
+&#x20;数据复制的好处： \
+&#x20;1、容错：一个节点出错，不致于让整个系统停止工作，别的节点可以接管它的工作； \
+&#x20;2、提高系统的扩展能力 ：把负载分布到多个节点上，或者增加节点来提高系统的负载能力； \
+&#x20;3、提高性能：让客户端本地访问就近的节点，提高用户访问速度。 \
+&#x20;\
 
 
-从客户端读写访问的透明度来看，数据复制集群系统分下面两种：   
- 1、写主\(WriteMaster\) ：对数据的修改提交给指定的节点。读无此限制，可以读取任何一个节点。这种情况下客户端需要对读与写进行区别，俗称读写分离；   
- 2、写任意\(Write Any\)：对数据的修改可提交给任意的节点，跟读一样。这种情况下，客户端对集群节点的角色与变化透明。   
+从客户端读写访问的透明度来看，数据复制集群系统分下面两种： \
+&#x20;1、写主(WriteMaster) ：对数据的修改提交给指定的节点。读无此限制，可以读取任何一个节点。这种情况下客户端需要对读与写进行区别，俗称读写分离； \
+&#x20;2、写任意(Write Any)：对数据的修改可提交给任意的节点，跟读一样。这种情况下，客户端对集群节点的角色与变化透明。 \
 
 
 对zookeeper来说，它采用的方式是写任意。通过增加机器，它的读吞吐能力和响应能力扩展性非常好，而写，随着机器的增多吞吐能力肯定下降（这也是它建立observer的原因），而响应能力则取决于具体实现方式，是延迟复制保持最终一致性，还是立即复制快速响应。
@@ -144,7 +144,7 @@ Zookeeper作为一个集群提供一致的数据服务，自然，它要在所�
 
 ZAB 是 ZooKeeper Atomic Broadcast （ZooKeeper 原子广播协议）的缩写，它是特别为 ZooKeeper 设计的崩溃可恢复的原子消息广播算法。ZooKeeper 使用 Leader来接收并处理所有事务请求，并采用 ZAB 协议，将服务器数据的状态变更以事务 Proposal 的形式广播到所有的 Follower 服务器上去。这种主备模型架构保证了同一时刻集群中只有一个服务器广播服务器的状态变更，因此能够很好的保证事物的完整性和顺序性。
 
-Zab协议有两种模式，它们分别是恢复模式\(recovery\)和广播模式\(broadcast\)。当服务启动或者在leader崩溃后，Zab就进入了恢复模式，当leader被选举出来，且大多数follower完成了和leader的状态同步以后， 恢复模式就结束了，ZAB开始进入广播模式。
+Zab协议有两种模式，它们分别是恢复模式(recovery)和广播模式(broadcast)。当服务启动或者在leader崩溃后，Zab就进入了恢复模式，当leader被选举出来，且大多数follower完成了和leader的状态同步以后， 恢复模式就结束了，ZAB开始进入广播模式。
 
 
 
@@ -178,9 +178,9 @@ OBSERVING：当前server角色为observer
 
 当leader崩溃或者leader失去大多数的follower，这时zk进入恢复模式，恢复模式需要重新选举出一个新的leader，让所有的Server都恢复到一个正确的状态。Zk的选举算法有两种：一种是基于basic paxos实现的，另外一种是基于fast paxos算法实现的。系统默认的选举算法为fast paxos。
 
-1、Zookeeper选主流程\(basic paxos\) （1）选举线程由当前Server发起选举的线程担任，其主要功能是对投票结果进行统计，并选出推荐的Server； （2）选举线程首先向所有Server发起一次询问\(包括自己\)； （3）选举线程收到回复后，验证是否是自己发起的询问\(验证zxid是否一致\)，然后获取对方的id\(myid\)，并存储到当前询问对象列表中，最后获取对方提议的leader相关信息\(id,zxid\)，并将这些信息存储到当次选举的投票记录表中； （4）收到所有Server回复以后，就计算出zxid最大的那个Server，并将这个Server相关信息设置成下一次要投票的Server； （5）线程将当前zxid最大的Server设置为当前Server要推荐的Leader，如果此时获胜的Server获得n/2 + 1的Server票数，设置当前推荐的leader为获胜的Server，将根据获胜的Server相关信息设置自己的状态，否则，继续这个过程，直到leader被选举出来。 通过流程分析我们可以得出：要使Leader获得多数Server的支持，则Server总数必须是奇数2n+1，且存活的Server的数目不得少于n+1. 每个Server启动后都会重复以上流程。在恢复模式下，如果是刚从崩溃状态恢复的或者刚启动的server还会从磁盘快照中恢复数据和会话信息，zk会记录事务日志并定期进行快照，方便在恢复时进行状态恢复。
+1、Zookeeper选主流程(basic paxos) （1）选举线程由当前Server发起选举的线程担任，其主要功能是对投票结果进行统计，并选出推荐的Server； （2）选举线程首先向所有Server发起一次询问(包括自己)； （3）选举线程收到回复后，验证是否是自己发起的询问(验证zxid是否一致)，然后获取对方的id(myid)，并存储到当前询问对象列表中，最后获取对方提议的leader相关信息(id,zxid)，并将这些信息存储到当次选举的投票记录表中； （4）收到所有Server回复以后，就计算出zxid最大的那个Server，并将这个Server相关信息设置成下一次要投票的Server； （5）线程将当前zxid最大的Server设置为当前Server要推荐的Leader，如果此时获胜的Server获得n/2 + 1的Server票数，设置当前推荐的leader为获胜的Server，将根据获胜的Server相关信息设置自己的状态，否则，继续这个过程，直到leader被选举出来。 通过流程分析我们可以得出：要使Leader获得多数Server的支持，则Server总数必须是奇数2n+1，且存活的Server的数目不得少于n+1. 每个Server启动后都会重复以上流程。在恢复模式下，如果是刚从崩溃状态恢复的或者刚启动的server还会从磁盘快照中恢复数据和会话信息，zk会记录事务日志并定期进行快照，方便在恢复时进行状态恢复。
 
-2、Zookeeper选主流程\(fast paxos\) fast paxos流程是在选举过程中，某Server首先向所有Server提议自己要成为leader，当其它Server收到提议以后，解决epoch和 zxid的冲突，并接受对方的提议，然后向对方发送接受提议完成的消息，重复这个流程，最后一定能选举出Leader。
+2、Zookeeper选主流程(fast paxos) fast paxos流程是在选举过程中，某Server首先向所有Server提议自己要成为leader，当其它Server收到提议以后，解决epoch和 zxid的冲突，并接受对方的提议，然后向对方发送接受提议完成的消息，重复这个流程，最后一定能选举出Leader。
 
 
 
@@ -202,22 +202,22 @@ OBSERVING：当前server角色为observer
 
 1、SNAP-全量同步
 
-* 条件：peerLastZxid&lt;minCommittedLog
+* 条件：peerLastZxid\<minCommittedLog
 * 说明：证明二者数据差异太大，follower数据过于陈旧，leader发送快照SNAP指令给follower全量同步数据，即leader将所有数据全量同步到follower
 
 2、DIFF-增量同步
 
-* 条件：minCommittedLog&lt;=peerLastZxid&lt;=maxCommittedLog
+* 条件：minCommittedLog<=peerLastZxid<=maxCommittedLog
 * 说明：证明二者数据差异不大，follower上有一些leader上已经提交的提议proposal未同步，此时需要增量提交这些提议即可
 
 3、TRUNC-仅回滚同步
 
-* 条件：peerLastZxid&gt;minCommittedLog
+* 条件：peerLastZxid>minCommittedLog
 * 说明：证明follower上有些提议proposal并未在leader上提交，follower需要回滚到zxid为minCommittedLog对应的事务操作
 
 4、TRUNC+DIFF-回滚+增量同步
 
-* 条件：minCommittedLog&lt;=peerLastZxid&lt;=maxCommittedLog
+* 条件：minCommittedLog<=peerLastZxid<=maxCommittedLog
 * 说明：leader a已经将事务truncA提交到本地事务日志中，但没有成功发起proposal协议进行投票就宕机了；然后集群中剔除原leader a重新选举出新leader b，又提交了若干新的提议proposal，然后原leader a重新服务又加入到集群中说明：此时a,b都有一些对方未提交的事务，若b是leader, a需要先回滚truncA然后增量同步新leader b上的数据。
 
 **题目：分布式通知和协调**
@@ -266,4 +266,3 @@ sessionID的构成：
 * 高8位代表创建Session时所在的zk节点的id
 * 中间40位代表zk节点当前角色在创建的时候的时间戳
 * 低16位是一个计数器，初始值为0
-

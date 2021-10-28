@@ -1,5 +1,5 @@
 ---
-description: 'https://www.cnblogs.com/walker-lin/p/11214127.html'
+description: https://www.cnblogs.com/walker-lin/p/11214127.html
 ---
 
 # docker
@@ -95,3 +95,18 @@ sudo systemctl restart docker
 echo "your-ip your-domain-name" >> /etc/hosts
 ```
 
+### ubuntu开启docker api
+
+```
+vim /lib/systemd/system/docker.service
+
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
+
+# 重启
+systemctl daemon-reload  && systemctl restart docker
+
+# 验证
+curl http://ip:2375/images/json
+```
+
+##

@@ -2,45 +2,45 @@
 
 一、帮助指令
 
-docker version          \#显示docker 的版本信息
+docker version          #显示docker 的版本信息
 
-docker info             \#显示docker 的系统信息，包括镜像和容器的数量
+docker info             #显示docker 的系统信息，包括镜像和容器的数量
 
-docker \[命令\] --help    \#命令的 帮助信息
+docker \[命令] --help    #命令的 帮助信息
 
 二、镜像命令
 
-【docker images          \#查看镜像列表】
+【docker images          #查看镜像列表】
 
 \#解释
 
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 
-REPOSITORY    \#镜像的仓库源
+REPOSITORY    #镜像的仓库源
 
-TAG           \#标签
+TAG           #标签
 
-IMAGE ID      \#镜像ID
+IMAGE ID      #镜像ID
 
-CREATED       \#创建时间
+CREATED       #创建时间
 
-SIZE          \#镜像大小
+SIZE          #镜像大小
 
-* --all 或 -a            \#看到所有的镜像
+* \--all 或 -a            #看到所有的镜像
 
-\[ByCore@localhost ~\]$ sudo docker images -a
+\[ByCore@localhost \~]$ sudo docker images -a
 
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 
-&lt;none&gt;       &lt;none&gt;    6084105296a9   2 weeks ago   133MB
+\<none>       \<none>    6084105296a9   2 weeks ago   133MB
 
 alpine       latest    28f6e2705743   5 weeks ago   5.61MB
 
-* --filter 或 -f         \#过滤
+* \--filter 或 -f         #过滤
 
-**--filter=reference='\*:latest' \#匹配 所有 REPOSITORY / TAG 为 latest 的 镜像**
+**--filter=reference='\*:latest' #匹配 所有 REPOSITORY / TAG 为 latest 的 镜像**
 
-\[ByCore@localhost ~\]$ sudo docker images --filter=reference='\*:latest'
+\[ByCore@localhost \~]$ sudo docker images --filter=reference='\*:latest'
 
 REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
 
@@ -50,91 +50,91 @@ mysql        latest    26d0ac143221   7 days ago     546MB
 
 nginx        latest    6084105296a9   2 weeks ago    133MB
 
-sudo docker inspect --format '{{\(index .RootFS.Layers 0\)}}' 302aba9ce190
+sudo docker inspect --format '{{(index .RootFS.Layers 0)}}' 302aba9ce190
 
-* --no-trunc              \#显示完整的镜像信息
+* \--no-trunc              #显示完整的镜像信息
 
-\[ByCore@localhost ~\]$ sudo docker images --no-trunc
+\[ByCore@localhost \~]$ sudo docker images --no-trunc
 
 REPOSITORY   TAG       IMAGE ID                                                                  CREATED       SIZE
 
-&lt;none&gt;       &lt;none&gt;    sha256:6084105296a952523c36eea261af38885f41e9d1d0001b4916fa426e45377ffe   2 weeks ago   133MB
+\<none>       \<none>    sha256:6084105296a952523c36eea261af38885f41e9d1d0001b4916fa426e45377ffe   2 weeks ago   133MB
 
 alpine       latest    sha256:28f6e27057430ed2a40dbdd50d2736a3f0a295924016e294938110eeb8439818   5 weeks ago   5.61MB
 
-\[ByCore@localhost ~\]$ sudo docker images
+\[ByCore@localhost \~]$ sudo docker images
 
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 
-&lt;none&gt;       &lt;none&gt;    6084105296a9   2 weeks ago   133MB
+\<none>       \<none>    6084105296a9   2 weeks ago   133MB
 
 alpine       latest    28f6e2705743   5 weeks ago   5.61MB
 
-* --digests                \#显示镜像的摘要信息
+* \--digests                #显示镜像的摘要信息
 
-\[ByCore@localhost ~\]$ sudo docker images --digests
+\[ByCore@localhost \~]$ sudo docker images --digests
 
 REPOSITORY   TAG       DIGEST                                                                    IMAGE ID       CREATED       SIZE
 
-&lt;none&gt;       &lt;none&gt;    &lt;none&gt;                                                                    6084105296a9   2 weeks ago   133MB
+\<none>       \<none>    \<none>                                                                    6084105296a9   2 weeks ago   133MB
 
 alpine       latest    sha256:a75afd8b57e7f34e4dad8d65e2c7ba2e1975c795ce1ee22fa34f8cf46f96a3be   28f6e2705743   5 weeks ago   5.61MB
 
-* --quiet 或 -q          \#值显示id
+* \--quiet 或 -q          #值显示id
 
-\[ByCore@localhost ~\]$ sudo docker images -q
+\[ByCore@localhost \~]$ sudo docker images -q
 
 6084105296a9
 
 28f6e2705743
 
-【docker search mysql        \#搜索镜像】
+【docker search mysql        #搜索镜像】
 
-\[ByCore@localhost ~\]$ sudo docker search mysql
+\[ByCore@localhost \~]$ sudo docker search mysql
 
 NAME                              DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 
-mysql                             MySQL is a widely used, open-source relation…   10665     \[OK\]       
+mysql                             MySQL is a widely used, open-source relation…   10665     \[OK]      &#x20;
 
-mariadb                           MariaDB Server is a high performing open sou…   3997      \[OK\]       
+mariadb                           MariaDB Server is a high performing open sou…   3997      \[OK]      &#x20;
 
-mysql/mysql-server                Optimized MySQL Server Docker images. Create…   779                  \[OK\]
+mysql/mysql-server                Optimized MySQL Server Docker images. Create…   779                  \[OK]
 
-percona                           Percona Server is a fork of the MySQL relati…   528       \[OK\]       
+percona                           Percona Server is a fork of the MySQL relati…   528       \[OK]      &#x20;
 
-centos/mysql-57-centos7           MySQL 5.7 SQL database server                   87                   
+centos/mysql-57-centos7           MySQL 5.7 SQL database server                   87                  &#x20;
 
-mysql/mysql-cluster               Experimental MySQL Cluster Docker images. Cr…   80                   
+mysql/mysql-cluster               Experimental MySQL Cluster Docker images. Cr…   80                  &#x20;
 
-centurylink/mysql                 Image containing mysql. Optimized to be link…   59                   \[OK\]
+centurylink/mysql                 Image containing mysql. Optimized to be link…   59                   \[OK]
 
-bitnami/mysql                     Bitnami MySQL Docker Image                      50                   \[OK\]
+bitnami/mysql                     Bitnami MySQL Docker Image                      50                   \[OK]
 
-databack/mysql-backup             Back up mysql databases to... anywhere!         42                   
+databack/mysql-backup             Back up mysql databases to... anywhere!         42                  &#x20;
 
-deitch/mysql-backup               REPLACED! Please use http://hub.docker.com/r…   41                   \[OK\]
+deitch/mysql-backup               REPLACED! Please use http://hub.docker.com/r…   41                   \[OK]
 
-prom/mysqld-exporter                                                              37                   \[OK\]
+prom/mysqld-exporter                                                              37                   \[OK]
 
 ....
 
-* --filter=STARS=3000        \#搜索 镜像STARS 大于3000 的镜像
+* \--filter=STARS=3000        #搜索 镜像STARS 大于3000 的镜像
 
-\[ByCore@localhost ~\]$ sudo docker search mysql --filter=STARS=3000
+\[ByCore@localhost \~]$ sudo docker search mysql --filter=STARS=3000
 
 NAME      DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 
-mysql     MySQL is a widely used, open-source relation…   10665     \[OK\]       
+mysql     MySQL is a widely used, open-source relation…   10665     \[OK]      &#x20;
 
-mariadb   MariaDB Server is a high performing open sou…   3997      \[OK\]       
+mariadb   MariaDB Server is a high performing open sou…   3997      \[OK]      &#x20;
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
-【docker pull 镜像名\[:tag\]        \#下载对应镜像】
+【docker pull 镜像名\[:tag]        #下载对应镜像】
 
 \#不添加 TAG 下载最新版本
 
-\[ByCore@localhost ~\]$ sudo docker pull mysql
+\[ByCore@localhost \~]$ sudo docker pull mysql
 
 Using default tag: latest
 
@@ -170,35 +170,35 @@ Status: Downloaded newer image for mysql:latest
 
 docker.io/library/mysql:latest
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
 \#列表显示容器的所有版本
 
 \#添加 TAG 下载指定版本
 
-\[ByCore@localhost ~\]$ sudo docker pull mysql:5.7
+\[ByCore@localhost \~]$ sudo docker pull mysql:5.7
 
-\[sudo\] password for ByCore:
+\[sudo] password for ByCore:
 
 Sorry, try again.
 
-\[sudo\] password for ByCore:
+\[sudo] password for ByCore:
 
 5.7: Pulling from library/mysql
 
-6f28985ad184: Already exists        =====&gt;
+6f28985ad184: Already exists        =====>
 
-e7cd18945cf6: Already exists        =====&gt;
+e7cd18945cf6: Already exists        =====>
 
-ee91068b9313: Already exists        =====&gt;
+ee91068b9313: Already exists        =====>
 
-b4efa1a4f93b: Already exists        =====&gt;
+b4efa1a4f93b: Already exists        =====>
 
-f220edfa5893: Already exists        =====&gt;
+f220edfa5893: Already exists        =====>
 
-74a27d3460f8: Already exists        =====&gt;
+74a27d3460f8: Already exists        =====>
 
-2e11e23b7542: Already exists        =====&gt; \#容器的分层架构，下载镜像时 会比对本地镜像的分层与Docker Hub 中的分层，如果存在折不下载
+2e11e23b7542: Already exists        =====> #容器的分层架构，下载镜像时 会比对本地镜像的分层与Docker Hub 中的分层，如果存在折不下载
 
 39ac93d44c47: Pull complete
 
@@ -214,13 +214,13 @@ Status: Downloaded newer image for mysql:5.7
 
 docker.io/library/mysql:5.7
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
-【docker rmi \[镜像ID:镜像名\[:tag\] \]       \#删除对应镜像】
+【docker rmi \[镜像ID:镜像名\[:tag] ]       #删除对应镜像】
 
-\#通过ID 删除镜像  \#通过镜像ID 删除 不能带TAG
+\#通过ID 删除镜像  #通过镜像ID 删除 不能带TAG
 
-\[ByCore@localhost ~\]$ sudo docker images
+\[ByCore@localhost \~]$ sudo docker images
 
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 
@@ -228,15 +228,15 @@ mysql        5.7       2fb283157d3c   7 days ago    449MB
 
 mysql        latest    26d0ac143221   7 days ago    546MB
 
-&lt;none&gt;       &lt;none&gt;    6084105296a9   2 weeks ago   133MB
+\<none>       \<none>    6084105296a9   2 weeks ago   133MB
 
 alpine       latest    28f6e2705743   5 weeks ago   5.61MB
 
-\[ByCore@localhost ~\]$ sudo docker rmi -f 6084105296a9    \#镜像有运行的容器时，不能够删除
+\[ByCore@localhost \~]$ sudo docker rmi -f 6084105296a9    #镜像有运行的容器时，不能够删除
 
-Error response from daemon: conflict: unable to delete 6084105296a9 \(cannot be forced\) - image is being used by running container 1fa1073b3ea4
+Error response from daemon: conflict: unable to delete 6084105296a9 (cannot be forced) - image is being used by running container 1fa1073b3ea4
 
-\[ByCore@localhost ~\]$ sudo docker rmi -f 2fb283157d3c
+\[ByCore@localhost \~]$ sudo docker rmi -f 2fb283157d3c
 
 Untagged: mysql:5.7
 
@@ -252,11 +252,11 @@ Deleted: sha256:6d2efff120dd67002624d7999876db66afeaf2aead8b7ccee4453e0d21a99628
 
 Deleted: sha256:ad80b667eed27f25e7066ea2ebe8e4449fd997d6011f8e24dc3e5c74a7a6784e
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
 \#通过镜像名 删除镜像
 
-\[ByCore@localhost ~\]$ sudo docker rmi mysql:latest
+\[ByCore@localhost \~]$ sudo docker rmi mysql:latest
 
 Untagged: mysql:latest
 
@@ -286,9 +286,9 @@ Deleted: sha256:3e8ad860e72cc47bcdee6afa9c58904bbd1bc003acecaaf98393dd1c960026a6
 
 Deleted: sha256:6f2660ea9ddbf232748e123ca4aa9f5f0ce40fef502ae2187456982b7c2efc33
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
-\[ByCore@localhost ~\]$ sudo docker images        
+\[ByCore@localhost \~]$ sudo docker images       &#x20;
 
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 
@@ -296,57 +296,57 @@ nginx        latest    6084105296a9   2 weeks ago   133MB
 
 alpine       latest    28f6e2705743   5 weeks ago   5.61MB
 
-\[ByCore@localhost ~\]$ sudo docker ps
+\[ByCore@localhost \~]$ sudo docker ps
 
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                NAMES
 
-1fa1073b3ea4   nginx     "/docker-entrypoint.…"   55 minutes ago   Up 55 minutes   0.0.0.0:81-&gt;80/tcp   nginx-run
+1fa1073b3ea4   nginx     "/docker-entrypoint.…"   55 minutes ago   Up 55 minutes   0.0.0.0:81->80/tcp   nginx-run
 
-\[ByCore@localhost ~\]$ sudo docker rmi -f nginx:latest    \#删除 有容器运行的 镜像时，只时Untagged 对应的 REPOSITORY 和 TAG
+\[ByCore@localhost \~]$ sudo docker rmi -f nginx:latest    #删除 有容器运行的 镜像时，只时Untagged 对应的 REPOSITORY 和 TAG
 
 Untagged: nginx:latest
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
-\[ByCore@localhost ~\]$ sudo docker rmi nginx:latest   \#不加 -f 参数时 不允许删除
+\[ByCore@localhost \~]$ sudo docker rmi nginx:latest   #不加 -f 参数时 不允许删除
 
-Error response from daemon: conflict: unable to remove repository reference "nginx:latest" \(must force\) - container 1fa1073b3ea4 is using its referenced image 6084105296a9
+Error response from daemon: conflict: unable to remove repository reference "nginx:latest" (must force) - container 1fa1073b3ea4 is using its referenced image 6084105296a9
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
 \#批量删除镜像
 
-\[ByCore@localhost ~\]$ sudo docker rmi -f $\(docker images -qa\)    \#删除所有镜像 如果有其中某些镜像有容器运行，无法删除
+\[ByCore@localhost \~]$ sudo docker rmi -f $(docker images -qa)    #删除所有镜像 如果有其中某些镜像有容器运行，无法删除
 
-\[ByCore@localhost ~\]$ sudo docker ps -a
+\[ByCore@localhost \~]$ sudo docker ps -a
 
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                        PORTS                NAMES
 
-7a5830b10086   nginx     "/docker-entrypoint.…"   13 minutes ago   Exited \(137\) 12 minutes ago                        nginx-run2
+7a5830b10086   nginx     "/docker-entrypoint.…"   13 minutes ago   Exited (137) 12 minutes ago                        nginx-run2
 
-23810f7ccd2a   nginx     "/docker-entrypoint.…"   19 minutes ago   Up 18 minutes                 0.0.0.0:81-&gt;80/tcp   nginx-run
+23810f7ccd2a   nginx     "/docker-entrypoint.…"   19 minutes ago   Up 18 minutes                 0.0.0.0:81->80/tcp   nginx-run
 
-\[ByCore@localhost ~\]$ sudo docker rm -f $\(sudo docker ps -qa --filter=status=exited\)  \#删除所有状态 为 exited 的容器
+\[ByCore@localhost \~]$ sudo docker rm -f $(sudo docker ps -qa --filter=status=exited)  #删除所有状态 为 exited 的容器
 
 7a5830b10086
 
-\#删除 tag 为 &lt;none&gt; 的镜像
+\#删除 tag 为 \<none> 的镜像
 
-\[ByCore@localhost ~\]$ sudo docker image prune
+\[ByCore@localhost \~]$ sudo docker image prune
 
-\[sudo\] password for ByCore:
+\[sudo] password for ByCore:
 
 WARNING! This will remove all dangling images.
 
-Are you sure you want to continue? \[y/N\] y
+Are you sure you want to continue? \[y/N] y
 
 Total reclaimed space: 0B
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
 \#删除 无容器 使用的镜像
 
-\[ByCore@localhost ~\]$ sudo docker images -a
+\[ByCore@localhost \~]$ sudo docker images -a
 
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 
@@ -358,11 +358,11 @@ nginx        latest    6084105296a9   2 weeks ago   133MB
 
 alpine       latest    28f6e2705743   5 weeks ago   5.61MB
 
-\[ByCore@localhost ~\]$ sudo docker image prune -a
+\[ByCore@localhost \~]$ sudo docker image prune -a
 
 WARNING! This will remove all images without at least one container associated to them.
 
-Are you sure you want to continue? \[y/N\] y
+Are you sure you want to continue? \[y/N] y
 
 Deleted Images:
 
@@ -418,7 +418,7 @@ deleted: sha256:cb381a32b2296e4eb5af3f84092a2e6685e88adbc54ee0768a1a1010ce6376c7
 
 Total reclaimed space: 795.9MB
 
-\[ByCore@localhost ~\]$ sudo docker images -a
+\[ByCore@localhost \~]$ sudo docker images -a
 
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 
@@ -426,76 +426,76 @@ nginx        latest    6084105296a9   2 weeks ago   133MB
 
 三、容器命令
 
-【docker run \[参数\] image】
+【docker run \[参数] image】
 
 \#参数说明
 
---name="name"        \#容器名称，给容器一个别名
+\--name="name"        #容器名称，给容器一个别名
 
--d                               \#后台方式运行
+\-d                               #后台方式运行
 
--it                               \#使用交互式运行，bind 交互式shell（进入交互式shell）
+\-it                               #使用交互式运行，bind 交互式shell（进入交互式shell）
 
--p                               \#绑定（映射）宿主机端口到容器软口 ：-p  8080:8080
+\-p                               #绑定（映射）宿主机端口到容器软口 ：-p  8080:8080
 
-                  \#\[-p ip:主机端口:容器端口\] : 带 ip
+&#x20;                 \#\[-p ip:主机端口:容器端口] : 带 ip
 
-                                 \#\[-p 主机端口:容器端口\]  
+&#x20;                                \#\[-p 主机端口:容器端口]\
 
 
-                  \#\[-p 容器端口\] : 不映射端口
+&#x20;                 \#\[-p 容器端口] : 不映射端口
 
-                  \#\[容器端口\]
+&#x20;                 \#\[容器端口]
 
--P                               \#大P 随机指定端口
+\-P                               #大P 随机指定端口
 
 * 启动并进入容器
 
-\[ByCore@localhost ~\]$ sudo docker run -it centos /bin/bash    \#不使用 --name 指定名称,docker 会随机生成一个 容器名称
+\[ByCore@localhost \~]$ sudo docker run -it centos /bin/bash    #不使用 --name 指定名称,docker 会随机生成一个 容器名称
 
-\[sudo\] password for ByCore:
+\[sudo] password for ByCore:
 
-\[root@79342bff2ffb /\]\#
+\[root@79342bff2ffb /]#
 
-\[root@79342bff2ffb /\]\# exit    
+\[root@79342bff2ffb /]# exit   &#x20;
 
 exit
 
-\[ByCore@localhost ~\]$ sudo docker ps
+\[ByCore@localhost \~]$ sudo docker ps
 
 CONTAINER ID   IMAGE          COMMAND                  CREATED       STATUS       PORTS                NAMES
 
-23810f7ccd2a   6084105296a9   "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:81-&gt;80/tcp   nginx-run
+23810f7ccd2a   6084105296a9   "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:81->80/tcp   nginx-run
 
-\[ByCore@localhost ~\]$ sudo docker ps -a
+\[ByCore@localhost \~]$ sudo docker ps -a
 
 CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS                      PORTS                NAMES
 
-79342bff2ffb   centos         "/bin/bash"              2 minutes ago   Exited \(0\) 14 seconds ago                        silly\_pike
+79342bff2ffb   centos         "/bin/bash"              2 minutes ago   Exited (0) 14 seconds ago                        silly\_pike
 
-23810f7ccd2a   6084105296a9   "/docker-entrypoint.…"   2 hours ago     Up 2 hours                  0.0.0.0:81-&gt;80/tcp   nginx-run
+23810f7ccd2a   6084105296a9   "/docker-entrypoint.…"   2 hours ago     Up 2 hours                  0.0.0.0:81->80/tcp   nginx-run
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
 【docker ps】列表容器
 
 \#参数说明
 
--a                      :显示所有的容器，包括未运行的。
+\-a                      :显示所有的容器，包括未运行的。
 
--f                      :根据条件过滤显示的内容。
+\-f                      :根据条件过滤显示的内容。
 
---format                :指定返回值的模板文件。 --format 的所有 key值 可以通过 模板 ：'{{json .}}' 来获取
+\--format                :指定返回值的模板文件。 --format 的所有 key值 可以通过 模板 ：'{{json .}}' 来获取
 
--l                      :显示最近创建的容器。
+\-l                      :显示最近创建的容器。
 
--n                      :列出最近创建的n个容器。
+\-n                      :列出最近创建的n个容器。
 
---no-trunc              :不截断输出。
+\--no-trunc              :不截断输出。
 
--q                      :静默模式，只显示容器编号。
+\-q                      :静默模式，只显示容器编号。
 
--s                      :显示总的文件大小。
+\-s                      :显示总的文件大小。
 
 \#输出信息：
 
@@ -527,73 +527,72 @@ dead                    :（死亡）
 
 \#过滤条件：
 
-id                      : container's id \[容器ID\]
+id                      : container's id \[容器ID]
 
-label                   : label=&lt;key&gt; \| label=&lt;key&gt;=&lt;value&gt;  \[1：  label=color   2:   label=color=blue\]
+label                   : label=\<key> | label=\<key>=\<value>  \[1：  label=color   2:   label=color=blue]
 
 exited                  :
 
-status                  : created\|restarting\|running\|removing\|paused\|exited\|dead
+status                  : created|restarting|running|removing|paused|exited|dead
 
 * 显示所有容器 -a 【包含exited 的容器】
 
-\[ByCore@localhost ~\]$ sudo docker ps -a    \#STATUS 包含Exited 为 停止的容器，包含Up 为 运行的容器 后面 接 时间，表示运行或停止的时常
+\[ByCore@localhost \~]$ sudo docker ps -a    #STATUS 包含Exited 为 停止的容器，包含Up 为 运行的容器 后面 接 时间，表示运行或停止的时常
 
 CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS                     PORTS                NAMES
 
-f93de165c287   centos         "/bin/bash"              5 minutes ago   Exited \(0\) 5 minutes ago                        infallible\_shtern
+f93de165c287   centos         "/bin/bash"              5 minutes ago   Exited (0) 5 minutes ago                        infallible\_shtern
 
-79342bff2ffb   centos         "/bin/bash"              9 minutes ago   Exited \(0\) 7 minutes ago                        silly\_pike
+79342bff2ffb   centos         "/bin/bash"              9 minutes ago   Exited (0) 7 minutes ago                        silly\_pike
 
-23810f7ccd2a   6084105296a9   "/docker-entrypoint.…"   2 hours ago     Up 2 hours                 0.0.0.0:81-&gt;80/tcp   nginx-run
+23810f7ccd2a   6084105296a9   "/docker-entrypoint.…"   2 hours ago     Up 2 hours                 0.0.0.0:81->80/tcp   nginx-run
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
 * 只显示 运行中的容器
 
 \#方法一 ：docker ps  【不加任何参数】
 
-\[ByCore@localhost ~\]$ sudo docker ps
+\[ByCore@localhost \~]$ sudo docker ps
 
 CONTAINER ID   IMAGE          COMMAND                  CREATED       STATUS       PORTS                NAMES
 
-23810f7ccd2a   6084105296a9   "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:81-&gt;80/tcp   nginx-run
+23810f7ccd2a   6084105296a9   "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:81->80/tcp   nginx-run
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
 \#方法二：sudo docker ps -a --filter=status=running
 
-\[ByCore@localhost ~\]$ sudo docker ps -a --filter=status=running
+\[ByCore@localhost \~]$ sudo docker ps -a --filter=status=running
 
 CONTAINER ID   IMAGE          COMMAND                  CREATED       STATUS       PORTS                NAMES
 
-23810f7ccd2a   6084105296a9   "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:81-&gt;80/tcp   nginx-run
+23810f7ccd2a   6084105296a9   "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:81->80/tcp   nginx-run
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
 * 只显示 停止状态的容器
 
 \#方法一：docker ps --filter=status=exited
 
-\[ByCore@localhost ~\]$ sudo docker ps --filter=status=exited
+\[ByCore@localhost \~]$ sudo docker ps --filter=status=exited
 
 CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                      PORTS     NAMES
 
-f93de165c287   centos    "/bin/bash"   15 minutes ago   Exited \(0\) 15 minutes ago             infallible\_shtern
+f93de165c287   centos    "/bin/bash"   15 minutes ago   Exited (0) 15 minutes ago             infallible\_shtern
 
-79342bff2ffb   centos    "/bin/bash"   20 minutes ago   Exited \(0\) 18 minutes ago             silly\_pike
+79342bff2ffb   centos    "/bin/bash"   20 minutes ago   Exited (0) 18 minutes ago             silly\_pike
 
-\[ByCore@localhost ~\]$
+\[ByCore@localhost \~]$
 
-\#方法二：docker ps -a --filter=exited=0        \#筛选的是 STATUS 状态为 exited 且 信号 为 0
+\#方法二：docker ps -a --filter=exited=0        #筛选的是 STATUS 状态为 exited 且 信号 为 0
 
-\[ByCore@localhost ~\]$ sudo docker ps -a --filter=exited=0
+\[ByCore@localhost \~]$ sudo docker ps -a --filter=exited=0
 
 CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                      PORTS     NAMES
 
-f93de165c287   centos    "/bin/bash"   29 minutes ago   Exited \(0\) 29 minutes ago             infallible\_shtern
+f93de165c287   centos    "/bin/bash"   29 minutes ago   Exited (0) 29 minutes ago             infallible\_shtern
 
-79342bff2ffb   centos    "/bin/bash"   33 minutes ago   Exited \(0\) 31 minutes ago             silly\_pike
+79342bff2ffb   centos    "/bin/bash"   33 minutes ago   Exited (0) 31 minutes ago             silly\_pike
 
-\[ByCore@localhost ~\]$
-
+\[ByCore@localhost \~]$

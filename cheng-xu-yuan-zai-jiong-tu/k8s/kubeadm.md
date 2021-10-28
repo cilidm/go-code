@@ -1,6 +1,6 @@
 # kubeadm
 
-## ubuntu 安装\(版本有问题\)  ubuntu走kubectl页面
+## ubuntu 安装(版本有问题)  ubuntu走kubectl页面
 
 ```bash
 sudo apt-get update && sudo apt-get install -y apt-transport-https curl
@@ -53,7 +53,7 @@ sudo systemctl enable kubelet
 
 #### kubeadm join: 节点加入到指定集群中
 
-#### kubeadm token: 管理用于加入集群时使用的认证令牌 \(如list，create\)
+#### kubeadm token: 管理用于加入集群时使用的认证令牌 (如list，create)
 
 #### kubeadm reset 重置集群，如删除 构建文件以回到初始状态
 
@@ -80,6 +80,10 @@ sudo kubeadm init --kubernetes-version=v1.18.6  --image-repository registry.aliy
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+# root执行
+echo "export KUBECONFIG=/etc/kubernetes/admin.conf"  >> /etc/profile
+source /etc/profile
 
 #  查看token列表 
 sudo kubeadm token list
@@ -120,5 +124,4 @@ sudo sysctl net.bridge.bridge-nf-call-iptables=1
 
 ## 其他问题可参考页面
 
-[https://blog.csdn.net/baidu\_38432732/article/details/105662626](https://blog.csdn.net/baidu_38432732/article/details/105662626)
-
+[https://blog.csdn.net/baidu\_38432732/article/details/105662626](https://blog.csdn.net/baidu\_38432732/article/details/105662626)
