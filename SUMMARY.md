@@ -212,6 +212,7 @@
   * [kubeadm](k8s/kubeadm.md)
   * [Helm3](k8s/helm3.md)
 * [kubernetes指南](kubernetes-zhi-nan/README.md)
+  * [kubernetes简介](kubernetes-zhi-nan/kubernetes-jian-jie.md)
   * [部署配置](kubernetes-zhi-nan/bu-shu-pei-zhi/README.md)
     * [kubectl 安装](kubernetes-zhi-nan/bu-shu-pei-zhi/kubectl-an-zhuang.md)
   * [核心组件](kubernetes-zhi-nan/he-xin-zu-jian/README.md)
