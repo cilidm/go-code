@@ -71,3 +71,16 @@ source /etc/profile
 
 注释掉 /etc/fstab 文件中的 swap配置
 
+## 允许master节点运行pod
+
+```bash
+# 允许master节点部署pod
+kubectl taint nodes --all node-role.kubernetes.io/master-
+# 如果不允许调度
+kubectl taint nodes master1 node-role.kubernetes.io/master=:NoSchedule
+# 污点可选参数
+# NoSchedule: 一定不能被调度
+# PreferNoSchedule: 尽量不要调度
+# NoExecute: 不仅不会调度, 还会驱逐Node上已有的Pod
+
+```
