@@ -210,6 +210,7 @@
   * [kubectl](k8s/kubectl-1/README.md)
     * [kubectl常用命令](k8s/kubectl-1/kubectl.md)
   * [kubeadm](k8s/kubeadm.md)
+  * [Yaml](k8s/yaml.md)
   * [Helm3](k8s/helm3.md)
 * [kubernetes指南](kubernetes-zhi-nan/README.md)
   * [1.kubernetes简介](kubernetes-zhi-nan/1.kubernetes-jian-jie.md)
