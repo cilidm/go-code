@@ -237,6 +237,7 @@
   * [核心组件](kubernetes-zhi-nan/he-xin-zu-jian/README.md)
     * [kubectl](kubernetes-zhi-nan/he-xin-zu-jian/kubectl.md)
 * [Shell脚本](shell-jiao-ben/README.md)
+  * [切割 Nginx 日志文件(防止单个文件过大,后期处理很困难)](shell-jiao-ben/qie-ge-nginx-ri-zhi-wen-jian-fang-zhi-dan-ge-wen-jian-guo-da-hou-qi-chu-li-hen-kun-nan.md)
   * [iptables 自动屏蔽访问网站频繁的 IP](shell-jiao-ben/iptables-zi-dong-ping-bi-fang-wen-wang-zhan-pin-fan-de-ip.md)
   * [统计文件中某字符串出现的次数](shell-jiao-ben/tong-ji-wen-jian-zhong-mou-zi-fu-chuan-chu-xian-de-ci-shu.md)
   * [删除某个目录下大小为 0 的文件](shell-jiao-ben/shan-chu-mou-ge-mu-lu-xia-da-xiao-wei-0-de-wen-jian.md)
