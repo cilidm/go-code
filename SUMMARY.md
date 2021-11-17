@@ -208,6 +208,7 @@
   * [匿名变量](go+python-shuang-yu-yan-hun-he-kai-fa/ni-ming-bian-liang.md)
 * [K8s](k8s/README.md)
   * [kubectl](k8s/kubectl-1/README.md)
+    * [Page 1](k8s/kubectl-1/page-1.md)
     * [kubectl常用命令](k8s/kubectl-1/kubectl.md)
   * [kubeadm](k8s/kubeadm.md)
   * [Yaml](k8s/yaml.md)
