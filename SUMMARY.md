@@ -213,6 +213,7 @@
   * [kubeadm](k8s/kubeadm.md)
   * [Yaml](k8s/yaml.md)
   * [Helm3](k8s/helm3.md)
+  * [JueJin](k8s/juejin.md)
 * [kubernetes指南](kubernetes-zhi-nan/README.md)
   * [1.kubernetes简介](kubernetes-zhi-nan/1.kubernetes-jian-jie.md)
   * [2.搭建k8s集群前置知识](kubernetes-zhi-nan/2.-da-jian-k8s-ji-qun-qian-zhi-zhi-shi.md)
