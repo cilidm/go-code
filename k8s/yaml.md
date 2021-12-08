@@ -219,7 +219,7 @@ spec: #specification of the resource content 指定该资源的内容
 # 原文链接：https://blog.csdn.net/liyingke112/article/details/76155428
 ```
 
-### Pod管理-创建/查询/更新/删除 <a href="blogtitle0" id="blogtitle0"></a>
+### Pod管理-创建/查询/更新/删除 <a href="#blogtitle0" id="blogtitle0"></a>
 
 ```bash
 # 基本管理：
@@ -446,6 +446,6 @@ spec:
 
 &#x20;
 
-** kubernetes核心组件kube-proxy：**
+&#x20;**kubernetes核心组件kube-proxy：**
 
 [https://www.cnblogs.com/fuyuteng/p/11598768.html](https://www.cnblogs.com/fuyuteng/p/11598768.html)

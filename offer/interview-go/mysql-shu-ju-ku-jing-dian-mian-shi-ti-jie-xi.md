@@ -291,7 +291,7 @@ select * from A where exists (select 1 from B where A.deptId = B.deptId);
 
 那么，这样写就等价于：
 
-> select _ from A,先从A表做循环 select _ from B where A.deptId = B.deptId,再从B表做循环.
+> select _from A,先从A表做循环 select_ from B where A.deptId = B.deptId,再从B表做循环.
 
 同理，可以抽象成这样一个循环：
 

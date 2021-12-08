@@ -8,7 +8,7 @@ description: Go语言HttpRequest项目源码地址： https://github.com/kirinla
 
 
 
-#### **安装：** <a href="e5-ae-89-e8-a3-85-ef-bc-9a" id="e5-ae-89-e8-a3-85-ef-bc-9a"></a>
+#### **安装：** <a href="#e5-ae-89-e8-a3-85-ef-bc-9a" id="e5-ae-89-e8-a3-85-ef-bc-9a"></a>
 
 ```go
 go get https://github.com/kirinlabs/HttpRequest
@@ -34,7 +34,7 @@ res,err := req.Get("https://api.github.com/events")
 
 返回一个res的Response对象和err的Error对象&#x20;
 
-#### 自定义Transport <a href="e8-87-aa-e5-ae-9a-e4-b9-89transport" id="e8-87-aa-e5-ae-9a-e4-b9-89transport"></a>
+#### 自定义Transport <a href="#e8-87-aa-e5-ae-9a-e4-b9-89transport" id="e8-87-aa-e5-ae-9a-e4-b9-89transport"></a>
 
 ```go
 var transport *http.Transport
@@ -160,7 +160,7 @@ res,err := req.Get("https://www.baidu.com/index?name=github",map[string]interfac
 
 
 
-#### 响应内容 <a href="e5-93-8d-e5-ba-94-e5-86-85-e5-ae-b9" id="e5-93-8d-e5-ba-94-e5-86-85-e5-ae-b9"></a>
+#### 响应内容 <a href="#e5-93-8d-e5-ba-94-e5-86-85-e5-ae-b9" id="e5-93-8d-e5-ba-94-e5-86-85-e5-ae-b9"></a>
 
 能读取服务器响应的内容
 
@@ -208,7 +208,7 @@ fmt.Println(body)
 
 &#x20;如果JSON解码失败，会返回一个err错误
 
-**定制请求头 **
+**定制请求头**&#x20;
 
 如果想为请求添加HTTP头部信息，只需要简单的传一个map给SetHeaders方法&#x20;
 
@@ -221,7 +221,7 @@ req.SetHeaders(map[string]string{
 
 注：所有header值必须是字符串，SetHeaders可以多次调用，如果Key重复则会覆盖前面设置的值
 
-#### BasicAuth 认证 <a href="basicauth-20-e8-ae-a4-e8-af-81" id="basicauth-20-e8-ae-a4-e8-af-81"></a>
+#### BasicAuth 认证 <a href="#basicauth-20-e8-ae-a4-e8-af-81" id="basicauth-20-e8-ae-a4-e8-af-81"></a>
 
 如果想为请求添加HTTP头部信息，只需要简单的传一个map给SetHeaders方法
 
@@ -229,7 +229,7 @@ req.SetHeaders(map[string]string{
 req.SetBasicAuth("username","password")
 ```
 
-#### CookieJar <a href="cookiejar" id="cookiejar"></a>
+#### CookieJar <a href="#cookiejar" id="cookiejar"></a>
 
 ```go
 j, _ := cookiejar.New(nil)
@@ -247,7 +247,7 @@ if err != nil {
 }
 ```
 
-#### Proxy代理 <a href="proxy-e4-bb-a3-e7-90-86" id="proxy-e4-bb-a3-e7-90-86"></a>
+#### Proxy代理 <a href="#proxy-e4-bb-a3-e7-90-86" id="proxy-e4-bb-a3-e7-90-86"></a>
 
 通过代理Ip访问
 
@@ -269,7 +269,7 @@ if err != nil {
 log.Println(string(body))
 ```
 
-#### JSON请求 <a href="json-e8-af-b7-e6-b1-82" id="json-e8-af-b7-e6-b1-82"></a>
+#### JSON请求 <a href="#json-e8-af-b7-e6-b1-82" id="json-e8-af-b7-e6-b1-82"></a>
 
 如果想以json方式发送请求，HttpRequest支持2种方式
 
@@ -293,7 +293,7 @@ res,err := req.JSON().Post("https://www.baidu.com",map[string]interface{}{
 })
 ```
 
-#### Cookie <a href="cookie" id="cookie"></a>
+#### Cookie <a href="#cookie" id="cookie"></a>
 
 ```go
 req.SetCookies(map[string]string{
@@ -301,13 +301,13 @@ req.SetCookies(map[string]string{
 })
 ```
 
-#### 超时   <a href="e8-b6-85-e6-97-b6-c2-a0-20-c2-a0" id="e8-b6-85-e6-97-b6-c2-a0-20-c2-a0"></a>
+#### 超时   <a href="#e8-b6-85-e6-97-b6-c2-a0-20-c2-a0" id="e8-b6-85-e6-97-b6-c2-a0-20-c2-a0"></a>
 
 ```
  req.SetTimeout(5)
 ```
 
-#### 关闭证书验证 <a href="e5-85-b3-e9-97-ad-e8-af-81-e4-b9-a6-e9-aa-8c-e8-af-81" id="e5-85-b3-e9-97-ad-e8-af-81-e4-b9-a6-e9-aa-8c-e8-af-81"></a>
+#### 关闭证书验证 <a href="#e5-85-b3-e9-97-ad-e8-af-81-e4-b9-a6-e9-aa-8c-e8-af-81" id="e5-85-b3-e9-97-ad-e8-af-81-e4-b9-a6-e9-aa-8c-e8-af-81"></a>
 
 当请求https协议时提示`x509: certificate signed by unknown authority`时，[可关闭证书验证](https://blog.bbzhh.com/index.php/archives/150.html)
 
@@ -315,13 +315,13 @@ req.SetCookies(map[string]string{
  req.SetTLSClient(&tls.Config{InsecureSkipVerify: true})
 ```
 
-#### 调试模式 <a href="e8-b0-83-e8-af-95-e6-a8-a1-e5-bc-8f" id="e8-b0-83-e8-af-95-e6-a8-a1-e5-bc-8f"></a>
+#### 调试模式 <a href="#e8-b0-83-e8-af-95-e6-a8-a1-e5-bc-8f" id="e8-b0-83-e8-af-95-e6-a8-a1-e5-bc-8f"></a>
 
 ```
 req.Debug(true)
 ```
 
-#### 连接操作 <a href="e8-bf-9e-e6-8e-a5-e6-93-8d-e4-bd-9c" id="e8-bf-9e-e6-8e-a5-e6-93-8d-e4-bd-9c"></a>
+#### 连接操作 <a href="#e8-bf-9e-e6-8e-a5-e6-93-8d-e4-bd-9c" id="e8-bf-9e-e6-8e-a5-e6-93-8d-e4-bd-9c"></a>
 
 而且还支持连接操作
 
@@ -329,7 +329,7 @@ req.Debug(true)
 req := HttpRequest.NewRequest().Debug(true).SetTimeout(5).SetHeader()
 ```
 
-**Respone对象 **
+**Respone对象**&#x20;
 
 获取返回的Response对象
 
@@ -365,7 +365,7 @@ resp.Time() string
 res.Url()
 ```
 
-#### 实例代码 <a href="e5-ae-9e-e4-be-8b-e4-bb-a3-e7-a0-81" id="e5-ae-9e-e4-be-8b-e4-bb-a3-e7-a0-81"></a>
+#### 实例代码 <a href="#e5-ae-9e-e4-be-8b-e4-bb-a3-e7-a0-81" id="e5-ae-9e-e4-be-8b-e4-bb-a3-e7-a0-81"></a>
 
 ```go
 package main
