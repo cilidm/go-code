@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Go Python学习备忘](README.md)
+  * [【必看】标准的 Go 项目布局](master/bi-kan-biao-zhun-de-go-xiang-mu-bu-ju.md)
 * [程序员在囧途](cheng-xu-yuan-zai-jiong-tu/README.md)
   * [保存](cheng-xu-yuan-zai-jiong-tu/bao-cun/README.md)
     * [Go原理](cheng-xu-yuan-zai-jiong-tu/bao-cun/go-yuan-li.md)
