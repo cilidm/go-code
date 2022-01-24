@@ -2,6 +2,7 @@
 
 * [Go Python学习备忘](README.md)
   * [【必看】标准的 Go 项目布局](master/bi-kan-biao-zhun-de-go-xiang-mu-bu-ju.md)
+  * [Redis缓存](master/redis-huan-cun.md)
   * [布隆过滤器](master/bu-long-guo-lv-qi.md)
   * [gorm修改表字段备注,及表注释](master/gorm-xiu-gai-biao-zi-duan-bei-zhu-ji-biao-zhu-shi.md)
 * [程序员在囧途](cheng-xu-yuan-zai-jiong-tu/README.md)
