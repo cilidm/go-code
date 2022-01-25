@@ -3,6 +3,7 @@
 * [Go Python学习备忘](README.md)
   * [【必看】标准的 Go 项目布局](master/bi-kan-biao-zhun-de-go-xiang-mu-bu-ju.md)
   * [Redis缓存](master/redis-huan-cun.md)
+  * [Mysql八股](master/mysql-ba-gu.md)
   * [深入探索redis的五种数据类型](master/shen-ru-tan-suo-redis-de-wu-zhong-shu-ju-lei-xing.md)
   * [布隆过滤器](master/bu-long-guo-lv-qi.md)
   * [gorm修改表字段备注,及表注释](master/gorm-xiu-gai-biao-zi-duan-bei-zhu-ji-biao-zhu-shi.md)
