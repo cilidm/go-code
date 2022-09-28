@@ -272,4 +272,5 @@
   * [杀死所有脚本](shell-jiao-ben/sha-si-suo-you-jiao-ben.md)
 * [Rust](rust/README.md)
   * [rust基础](rust/rust-ji-chu/README.md)
-    * [Demo](rust/rust-ji-chu/demo.md)
+    * [Demo1](rust/rust-ji-chu/demo1.md)
+    * [Demo2](rust/rust-ji-chu/demo2.md)
