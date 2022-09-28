@@ -271,4 +271,5 @@
   * [从 FTP 服务器下载文件](shell-jiao-ben/cong-ftp-fu-wu-qi-xia-zai-wen-jian.md)
   * [杀死所有脚本](shell-jiao-ben/sha-si-suo-you-jiao-ben.md)
 * [Rust](rust/README.md)
-  * [rust基础](rust/rust-ji-chu.md)
+  * [rust基础](rust/rust-ji-chu/README.md)
+    * [Demo](rust/rust-ji-chu/demo.md)
