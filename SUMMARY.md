@@ -275,3 +275,5 @@
     * [1. 结构体的使用和输出+数组、元组](rust/rust-ji-chu/jiegouti.md)
     * [2. 练习](rust/rust-ji-chu/lianxi.md)
     * [3. 泛型](rust/rust-ji-chu/famxomg.md)
+  * [帮助](rust/bang-zhu/README.md)
+    * [Vscode Could't Start Client Rust Language Server](rust/bang-zhu/vscode-couldt-start-client-rust-language-server.md)
