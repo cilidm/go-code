@@ -52,6 +52,11 @@ fn main() {
     let my:(&str,u8) = ("abc",18);
     println!("{:#?}",my);
     println!("{},{}",my.0,my.1);
+
+    let tags:[u8;10] = [0;10];
+    for (i,item) in tags.iter().enumerate(){
+        println!("index:{},value:{}",i,item)
+    }
 }
 
 ```
