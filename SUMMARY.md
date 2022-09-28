@@ -270,4 +270,5 @@
   * [监测 Nginx 访问日志 502 情况，并做相应动作](shell-jiao-ben/jian-ce-nginx-fang-wen-ri-zhi-502-qing-kuang-bing-zuo-xiang-ying-dong-zuo.md)
   * [从 FTP 服务器下载文件](shell-jiao-ben/cong-ftp-fu-wu-qi-xia-zai-wen-jian.md)
   * [杀死所有脚本](shell-jiao-ben/sha-si-suo-you-jiao-ben.md)
-* [Rust](rust.md)
+* [Rust](rust/README.md)
+  * [rust基础](rust/rust-ji-chu.md)
