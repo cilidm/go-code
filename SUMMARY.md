@@ -272,5 +272,6 @@
   * [杀死所有脚本](shell-jiao-ben/sha-si-suo-you-jiao-ben.md)
 * [Rust](rust/README.md)
   * [rust基础](rust/rust-ji-chu/README.md)
-    * [Demo1](rust/rust-ji-chu/demo1.md)
-    * [Demo2](rust/rust-ji-chu/demo2.md)
+    * [1. 结构体的使用和输出+数组、元组](rust/rust-ji-chu/jiegouti.md)
+    * [2. 练习](rust/rust-ji-chu/lianxi.md)
+    * [3. 泛型](rust/rust-ji-chu/famxomg.md)
