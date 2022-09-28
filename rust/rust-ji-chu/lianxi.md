@@ -1,4 +1,4 @@
-# demo2
+# 2. 练习
 
 > mod.rs
 ```rust
